@@ -4,39 +4,19 @@
 		<meta charset="utf-8">
 		<title>Me</title>
 		
+		<!-- jQuery Library -->
+		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+		
+		<!-- Home Stylesheet -->
 		<link rel="stylesheet" type="text/css" href="Home.css">
 
 		<script>
-			var offsetTop;
-
-			$(document).ready(function() {
-				$('img.contrast').one('load', function() {
-					offsetTop = $('nav').offset().top;
-				}).each(function() {
-					if (this.complete)
-						$(this).load();
-				});
-
-				$(window).on("scroll", function() {
-					stickyNav();
-				});
-			});
-
-			function stickyNav() {
-				var navHeight = offsetTop;
-				if ($(window).scrollTop() > navHeight) {
-					$('.main-menu').addClass('fixed');
-				} else {
-					$('.main-menu').removeClass('fixed');
-				}
-			}
 		</script>
 	</head>
 
 	<body>
 		<nav class="main-menu">
 			<ul>
-
 				<li class="current">
 					<a href="Home.html">Home</a>
 				</li>
@@ -51,7 +31,65 @@
 				<li >
 					<a href="/contact">Contact Me</a>
 				</li>
-
 			</ul>
 		</nav>
+		<div class="first-row">
+			This is my first row
+		</div>
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
+		<br />
 	</body>
