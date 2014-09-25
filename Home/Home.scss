@@ -1,8 +1,11 @@
 /**** Variables ****/
-$DarkBlue:  #779ECB;
-$Blue:      #AEC6CF;
+$White:     #FFFFFF;
+$DarkBlue:  #1D2F43;
+$Blue:      #A4C6CF;
+$LightBlue: #E8EDE9;
 $Grey:      #CFCFC4;
 $Purple:    #B39EB5;
+$rowSize:   600px;
 
 /**** Body Congif ****/
 body {
@@ -19,6 +22,7 @@ body {
   position:fixed;
   z-index: 2000;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  background: $White;
 }
 .main-menu li{
   display: inline-block; 
@@ -32,9 +36,29 @@ body {
   color:#989898;
 }
 
+/**** Rows General ****/
+.first-row, .second-row, .third-row {
+  position: relative;
+  width:100%;
+  height: $rowSize;
+}
 /**** First Row ****/
 .first-row {
-  padding-top:100px;
   background: $DarkBlue;
-  width:100%;
+  padding-top: 100px;
+}
+
+/**** Second Row ****/
+.second-row {
+  background: $LightBlue;
+}
+
+/**** Third Row ****/
+.third-row {
+  background: $Blue;
+}
+
+/**** Fade In ****/
+.fade-in {
+  opacity:0 ;
 }

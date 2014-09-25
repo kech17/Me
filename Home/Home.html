@@ -3,14 +3,33 @@
 	<head>
 		<meta charset="utf-8">
 		<title>Me</title>
-		
+
 		<!-- jQuery Library -->
 		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-		
+
 		<!-- Home Stylesheet -->
 		<link rel="stylesheet" type="text/css" href="Home.css">
-
+		<link rel="stylesheet" type="text/css" href="Images.css">
+		
+		<!-- Hover Effects -->
+		<link rel="stylesheet" type="text/css" href="/Me/HoverEffect/css/component.css">
+		<link rel="stylesheet" type="text/css" href="/Me/HoverEffect/css/normalize.css">
+		
 		<script>
+			$(document).ready(function() {
+				$(window).scroll(function() {
+					$('.fade-in').each(function(i) {
+						var bottom_of_object = $(this).position().top + $(this).outerHeight();
+						var bottom_of_window = $(window).scrollTop() + $(window).height();
+						/* If the object is completely visible in the window, fade it it */
+						if (bottom_of_window > bottom_of_object - $(this).outerHeight() / 2) {
+							$(this).animate({
+								'opacity' : '1'
+							}, 500);
+						}
+					});
+				});
+			});
 		</script>
 	</head>
 
@@ -34,62 +53,31 @@
 			</ul>
 		</nav>
 		<div class="first-row">
-			This is my first row
+			<div class="first-text">
+				ABOUT ME
+			</div>
 		</div>
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
-		<br />
+		<div class="second-row">
+			This is my second row
+		</div>
+		<div class="third-row">
+			<img src="/Resource/test.jpg" alt="test" class="fade-in"/>
+		</div>
+		<div class="grid">
+
+			<figure class="effect-sadie">
+				<img src="/HoverEffect/img/10.jpg" alt="img01"/>
+				<figcaption>
+					<h2>Nice <span>Lily</span></h2>
+					<p>
+						Lily likes to play with crayons and pencils
+					</p>
+					<a href="#">View more</a>
+				</figcaption>
+			</figure>
+
+			<!-- ... -->
+
+		</div>
+
 	</body>
