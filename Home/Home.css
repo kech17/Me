@@ -47,3 +47,6 @@ body {
 /**** Fade In ****/
 .fade-in {
   opacity: 0; }
+
+.grid figure a {
+  position: absolute; }

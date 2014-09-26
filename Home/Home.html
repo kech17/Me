@@ -5,11 +5,13 @@
 		<title>Me</title>
 
 		<!-- jQuery Library -->
-		<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-
+		<script src="/Me/jQuery/jquery-1.11.1.min.js"></script>
+		<script src="/Me/jQuery/jquery-ui.min.js"></script>
+		<link rel="stylesheet" type="text/css" href="/Me/jQuery/jquery-ui.min.css">
+		<link rel="stylesheet" type="text/css" href="/Me/jQuery/jquery-ui.structure.min.css">
+		
 		<!-- Home Stylesheet -->
 		<link rel="stylesheet" type="text/css" href="Home.css">
-		<link rel="stylesheet" type="text/css" href="Images.css">
 		
 		<!-- Hover Effects -->
 		<link rel="stylesheet" type="text/css" href="/Me/HoverEffect/css/component.css">
@@ -19,13 +21,15 @@
 			$(document).ready(function() {
 				$(window).scroll(function() {
 					$('.fade-in').each(function(i) {
-						var bottom_of_object = $(this).position().top + $(this).outerHeight();
+						var bottom_of_object = $(this).offset().top + $(this).outerHeight();
 						var bottom_of_window = $(window).scrollTop() + $(window).height();
 						/* If the object is completely visible in the window, fade it it */
 						if (bottom_of_window > bottom_of_object - $(this).outerHeight() / 2) {
 							$(this).animate({
-								'opacity' : '1'
+								opacity : 1,
+								marginLeft : '+=200px'
 							}, 500);
+							$(window).off('scroll');
 						}
 					});
 				});
@@ -34,6 +38,7 @@
 	</head>
 
 	<body>
+		<!--
 		<nav class="main-menu">
 			<ul>
 				<li class="current">
@@ -51,7 +56,31 @@
 					<a href="/contact">Contact Me</a>
 				</li>
 			</ul>
-		</nav>
+		</nav>-->
+		<div class="grid">
+			<figure class="effect-romeo">
+					<img src="/Me/HoverEffect/img/5.jpg" alt="img05"/>
+					<figcaption>
+						<h2>Wild <span>Romeo</span></h2>
+						<p>Romeo never knows what he wants. He seemed to be very cross about something.</p>
+						<a href="#">View more</a>
+					</figcaption>			
+				</figure><figure class="effect-romeo">
+					<img src="/Me/HoverEffect/img/5.jpg" alt="img05"/>
+					<figcaption>
+						<h2>Wild <span>Romeo</span></h2>
+						<p>Romeo never knows what he wants. He seemed to be very cross about something.</p>
+						<a href="#">View more</a>
+					</figcaption>			
+				</figure><figure class="effect-romeo">
+					<img src="/Me/HoverEffect/img/5.jpg" alt="img05"/>
+					<figcaption>
+						<h2>Wild <span>Romeo</span></h2>
+						<p>Romeo never knows what he wants. He seemed to be very cross about something.</p>
+						<a href="#">View more</a>
+					</figcaption>			
+				</figure>
+		</div>
 		<div class="first-row">
 			<div class="first-text">
 				ABOUT ME
@@ -61,23 +90,10 @@
 			This is my second row
 		</div>
 		<div class="third-row">
-			<img src="/Resource/test.jpg" alt="test" class="fade-in"/>
+			<img src="/Me/Resource/test.jpg" alt="test" class="fade-in"/>
 		</div>
-		<div class="grid">
-
-			<figure class="effect-sadie">
-				<img src="/HoverEffect/img/10.jpg" alt="img01"/>
-				<figcaption>
-					<h2>Nice <span>Lily</span></h2>
-					<p>
-						Lily likes to play with crayons and pencils
-					</p>
-					<a href="#">View more</a>
-				</figcaption>
-			</figure>
-
-			<!-- ... -->
-
-		</div>
-
+		<br>
+		<br>
+		<br>
+		<img src="/Me/Resource/test.jpg" alt="test" class="fade-in"/>
 	</body>
