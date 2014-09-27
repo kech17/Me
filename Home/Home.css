@@ -5,21 +5,21 @@ body {
 
 /**** Navigation Menu ****/
 .main-menu {
-  padding-top: 30px;
+  padding-top: 20px;
   height: 70px;
   width: 100%;
   top: 0;
   position: fixed;
   z-index: 2000;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  background: #FFFFFF; }
+  background: url(/Me/Resource/navBack.png) repeat-x; }
 
 .main-menu li {
   display: inline-block;
   padding: 0px 20px; }
 
 .main-menu a {
-  color: #4e4e4e;
+  color: #FFFFFF;
   font-weight: bold; }
 
 .main-menu a:hover, .main-menu .current a {
@@ -33,12 +33,22 @@ body {
 
 /**** First Row ****/
 .first-row {
-  background: #1D2F43;
+  background: #FFFFFF;
   padding-top: 100px; }
 
 /**** Second Row ****/
 .second-row {
-  background: #E8EDE9; }
+  background: #37353a; }
+
+.second-row .triangle {
+  position: absolute;
+  top: -5px;
+  left: 46%;
+  width: 0%;
+  height: 0%;
+  border-left: 40px solid transparent;
+  border-right: 40px solid transparent;
+  border-top: 30px solid #FFFFFF; }
 
 /**** Third Row ****/
 .third-row {
@@ -47,6 +57,3 @@ body {
 /**** Fade In ****/
 .fade-in {
   opacity: 0; }
-
-.grid figure a {
-  position: absolute; }

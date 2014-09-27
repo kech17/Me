@@ -12,10 +12,7 @@
 		
 		<!-- Home Stylesheet -->
 		<link rel="stylesheet" type="text/css" href="Home.css">
-		
-		<!-- Hover Effects -->
-		<link rel="stylesheet" type="text/css" href="/Me/HoverEffect/css/component.css">
-		<link rel="stylesheet" type="text/css" href="/Me/HoverEffect/css/normalize.css">
+
 		
 		<script>
 			$(document).ready(function() {
@@ -29,7 +26,8 @@
 								opacity : 1,
 								marginLeft : '+=200px'
 							}, 500);
-							$(window).off('scroll');
+							$(this).removeClass('fade-in');
+                			$(this).addClass('fade-in-shown');
 						}
 					});
 				});
@@ -38,7 +36,6 @@
 	</head>
 
 	<body>
-		<!--
 		<nav class="main-menu">
 			<ul>
 				<li class="current">
@@ -56,37 +53,15 @@
 					<a href="/contact">Contact Me</a>
 				</li>
 			</ul>
-		</nav>-->
-		<div class="grid">
-			<figure class="effect-romeo">
-					<img src="/Me/HoverEffect/img/5.jpg" alt="img05"/>
-					<figcaption>
-						<h2>Wild <span>Romeo</span></h2>
-						<p>Romeo never knows what he wants. He seemed to be very cross about something.</p>
-						<a href="#">View more</a>
-					</figcaption>			
-				</figure><figure class="effect-romeo">
-					<img src="/Me/HoverEffect/img/5.jpg" alt="img05"/>
-					<figcaption>
-						<h2>Wild <span>Romeo</span></h2>
-						<p>Romeo never knows what he wants. He seemed to be very cross about something.</p>
-						<a href="#">View more</a>
-					</figcaption>			
-				</figure><figure class="effect-romeo">
-					<img src="/Me/HoverEffect/img/5.jpg" alt="img05"/>
-					<figcaption>
-						<h2>Wild <span>Romeo</span></h2>
-						<p>Romeo never knows what he wants. He seemed to be very cross about something.</p>
-						<a href="#">View more</a>
-					</figcaption>			
-				</figure>
-		</div>
+		</nav>
+		
 		<div class="first-row">
 			<div class="first-text">
 				ABOUT ME
 			</div>
 		</div>
 		<div class="second-row">
+			<div class="triangle"></div>
 			This is my second row
 		</div>
 		<div class="third-row">
