@@ -15,6 +15,7 @@
 
 		
 		<script>
+		var fadeFromLeft = 100;
 			$(document).ready(function() {
 				$(window).scroll(function() {
 					$('.fade-in').each(function(i) {
@@ -24,7 +25,7 @@
 						if (bottom_of_window > bottom_of_object - $(this).outerHeight() / 2) {
 							$(this).animate({
 								opacity : 1,
-								marginLeft : '+=200px'
+								marginLeft : '+=' + fadeFromLeft
 							}, 500);
 							$(this).removeClass('fade-in');
                 			$(this).addClass('fade-in-shown');
@@ -55,13 +56,16 @@
 			</ul>
 		</nav>
 		<div class="fixed-row main-row">
-			<h1>TITLE</h1>
-		</div>
-		
-		<div class="first-row">
-			<div class="first-text">
-				ABOUT ME
+			<div class="title-wrapper">
+				<h1>TITLE</h1>
 			</div>
+			<div class="triangle"></div>
+		</div>
+		<div class="first-row">
+			<div class="wrapper">
+				<img src="/Me/Resource/resume.png" alt="resume.png" class="fade-in"/>
+			</div>
+			<div class="row-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
 		</div>
 		<div class="second-row">
 			<div class="triangle"></div>
@@ -73,5 +77,7 @@
 		<br>
 		<br>
 		<br>
-		<img src="/Me/Resource/test.jpg" alt="test" class="fade-in"/>
+		<div class="footer">
+			This is footer
+		</div>
 	</body>
