@@ -18,9 +18,9 @@
 		var fadeFromLeft = 100;
 			$(document).ready(function() {
 				$(window).scroll(function() {
+					var bottom_of_window = $(window).scrollTop() + $(window).height();
 					$('.fade-in').each(function(i) {
 						var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-						var bottom_of_window = $(window).scrollTop() + $(window).height();
 						/* If the object is completely visible in the window, fade it it */
 						if (bottom_of_window > bottom_of_object - $(this).outerHeight() / 2) {
 							$(this).animate({
@@ -31,6 +31,14 @@
                 			$(this).addClass('fade-in-shown');
 						}
 					});
+					var navBot = $('.main-menu').offset().top + $('.main-menu').outerHeight();
+					/*if ($(window).scrollTop() > 66) {
+						$('.main-menu').animate({
+							backgroundColor: "#FFFFFF",
+							boxShadow: "0 2px 6px rgba(0, 0, 0, 0.2)",
+							position: "fixed"
+						}, 500);
+					}*/
 				});
 			});
 		</script>
@@ -59,24 +67,36 @@
 			<div class="title-wrapper">
 				<h1>TITLE</h1>
 			</div>
-			<div class="triangle"></div>
 		</div>
 		<div class="first-row">
+			<header>
+				<h2>about me.</h2>
+			</header>
+			<table>
+				<tr>
+					<td>table pic1</td>
+					<td>table pic2</td>
+					<td>table pic3</td>
+					<td>table pic4</td>
+				</tr>
+				<tr>
+					<td>caption1</td>
+					<td>caption2</td>
+					<td>caption3</td>
+					<td>caption4</td>
+				</tr>
+			</table>
+		</div>
+		<div class="second-row">
+			<div class="triangle"></div>
 			<div class="wrapper">
 				<img src="/Me/Resource/resume.png" alt="resume.png" class="fade-in"/>
 			</div>
 			<div class="row-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
 		</div>
-		<div class="second-row">
-			<div class="triangle"></div>
-			This is my second row
-		</div>
 		<div class="third-row">
 			<img src="/Me/Resource/test.jpg" alt="test" class="fade-in"/>
 		</div>
-		<br>
-		<br>
-		<br>
 		<div class="footer">
 			This is footer
 		</div>

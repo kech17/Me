@@ -14,10 +14,8 @@ body, html, main {
   width: 100%;
   top: 0;
   opacity: .95;
-  position: fixed;
   z-index: 2000;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  background: #FFFFFF; }
+  background: transparent; }
 
 .main-menu li {
   display: inline-block;
@@ -38,7 +36,7 @@ body, html, main {
 
 .triangle {
   position: absolute;
-  top: -5px;
+  top: 0px;
   left: 46%;
   width: 0%;
   height: 0%;
@@ -74,31 +72,38 @@ body, html, main {
   line-height: 1.2em; }
 
 /**** First Row ****/
-.first-row {
-  background: #1D2F43; }
-
-.first-row .triangle {
-  border-top: 30px solid transparent; }
-
-.first-row .wrapper {
-  display: inline-block; }
-
-.first-row .row-text {
-  padding-right: 10%;
-  padding-left: 10%;
-  position: absolute;
-  display: inline-block; }
-
-/**** Second Row ****/
 .second-row {
-  background: #CFCFC4; }
+  background: #779ECB; }
 
 .second-row .triangle {
-  border-top: 30px solid #1D2F43; }
+  border-top: 30px solid #CFCFC4; }
+
+.second-row .wrapper {
+  display: inline-block; }
+
+.second-row .row-text {
+  position: absolute;
+  margin-right: 10%;
+  width: 400px;
+  left: 700px;
+  top: 50px; }
+
+/**** Second Row ****/
+.first-row {
+  background: #77DD77; }
+
+.first-row header {
+  margin: 0;
+  padding-top: 70px;
+  text-align: center; }
+
+.first-row table {
+  text-align: center;
+  width: 100%; }
 
 /**** Third Row ****/
 .third-row {
-  background: #A4C6CF; }
+  background: #779ECB; }
 
 /**** Fade In ****/
 .fade-in {

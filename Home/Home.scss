@@ -1,11 +1,13 @@
 /**** Variables ****/
 $White:     #FFFFFF;
 $DarkBlue:  #1D2F43;
-$Blue:      #A4C6CF;
+$Blue:      #779ECB;
 $LightBlue: #E8EDE9;
 $Grey:      #CFCFC4;
 $Purple:    #B39EB5;
 $Dark:      #37353a;
+$Green:     #77DD77;
+
 $rowSize:   600px;
 
 /**** Body Congif ****/
@@ -25,10 +27,8 @@ body, html, main {
   width:100%;
   top:0;
   opacity:.95;
-  position:fixed;
   z-index: 2000;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
-  background: $White;
+  background: transparent;
 }
 .main-menu li{
   display: inline-block; 
@@ -50,7 +50,7 @@ body, html, main {
 }
 .triangle {
   position:absolute;
-  top:-5px;
+  top:0px;
   left:46%;
   width:0%;
   height:0%;
@@ -88,28 +88,34 @@ body, html, main {
 }
 
 /**** First Row ****/
-.first-row {
-  background: $DarkBlue;
-}
-.first-row .triangle {
-  border-top: 30px solid transparent;
-}
-.first-row .wrapper{
-  display:inline-block;
-}
-.first-row .row-text{
-  padding-right:10%;
-  padding-left:10%;
-  position: absolute;
-  display:inline-block;
-}
-/**** Second Row ****/
 .second-row {
-  background: $Grey;
+  background: $Blue;
 }
 .second-row .triangle {
-  border-top: 30px solid $DarkBlue;
-
+  border-top: 30px solid $Grey;
+}
+.second-row .wrapper{
+  display:inline-block;
+}
+.second-row .row-text{
+  position: absolute;
+  margin-right: 10%;
+  width: 400px;
+  left: 700px;
+  top:50px;
+}
+/**** Second Row ****/
+.first-row {
+  background: $Green;
+}
+.first-row header{
+  margin:0;
+  padding-top:70px;
+  text-align:center;
+}
+.first-row table {
+  text-align:center;
+  width:100%;
 }
 /**** Third Row ****/
 .third-row {
