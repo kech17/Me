@@ -13,6 +13,8 @@
 		<!-- Home Stylesheet -->
 		<link rel="stylesheet" type="text/css" href="Home.css">
 
+		<!-- Google Font -->
+		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Montserrat">
 		
 		<script>
 		var fadeFromLeft = 100;
@@ -31,21 +33,22 @@
                 			$(this).addClass('fade-in-shown');
 						}
 					});
-					var navBot = $('.main-menu').offset().top + $('.main-menu').outerHeight();
-					/*if ($(window).scrollTop() > 66) {
+					var offset = $('.first-row').offset().top;
+					if ($(window).scrollTop() > offset) {
 						$('.main-menu').animate({
 							backgroundColor: "#FFFFFF",
 							boxShadow: "0 2px 6px rgba(0, 0, 0, 0.2)",
-							position: "fixed"
+							top: '0px'
 						}, 500);
-					}*/
+					}
 				});
 			});
 		</script>
 	</head>
 
 	<body>
-		<nav class="main-menu">
+		<div class="fixed-row main-row">
+			<nav class="main-menu">
 			<ul>
 				<li class="current">
 					<a href="Home.html">Home</a>
@@ -63,9 +66,10 @@
 				</li>
 			</ul>
 		</nav>
-		<div class="fixed-row main-row">
 			<div class="title-wrapper">
-				<h1>TITLE</h1>
+				<h1>Hi, my name is Kevin</h1>
+				<h1>and</h1>
+				<h1>I'M A DEVELOPER</h1>
 			</div>
 		</div>
 		<div class="first-row">
