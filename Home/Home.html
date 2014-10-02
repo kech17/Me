@@ -9,15 +9,16 @@
 		<script src="/Me/jQuery/jquery-ui.min.js"></script>
 		<link rel="stylesheet" type="text/css" href="/Me/jQuery/jquery-ui.min.css">
 		<link rel="stylesheet" type="text/css" href="/Me/jQuery/jquery-ui.structure.min.css">
-		
+
 		<!-- Home Stylesheet -->
 		<link rel="stylesheet" type="text/css" href="Home.css">
 
-		<!-- Google Font -->
+		<!-- Google Fonts -->
 		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Montserrat">
-		
+		<link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
+
 		<script>
-		var fadeFromLeft = 100;
+			var fadeFromLeft = 100;
 			$(document).ready(function() {
 				$(window).scroll(function() {
 					var bottom_of_window = $(window).scrollTop() + $(window).height();
@@ -30,15 +31,15 @@
 								marginLeft : '+=' + fadeFromLeft
 							}, 500);
 							$(this).removeClass('fade-in');
-                			$(this).addClass('fade-in-shown');
+							$(this).addClass('fade-in-shown');
 						}
 					});
 					var offset = $('.first-row').offset().top;
 					if ($(window).scrollTop() > offset) {
 						$('.main-menu').animate({
-							backgroundColor: "#FFFFFF",
-							boxShadow: "0 2px 6px rgba(0, 0, 0, 0.2)",
-							top: '0px'
+							backgroundColor : "#FFFFFF",
+							boxShadow : "0 2px 6px rgba(0, 0, 0, 0.2)",
+							top : '0px'
 						}, 500);
 					}
 				});
@@ -49,28 +50,33 @@
 	<body>
 		<div class="fixed-row main-row">
 			<nav class="main-menu">
-			<ul>
-				<li class="current">
-					<a href="Home.html">Home</a>
-				</li>
+				<ul>
+					<li class="current">
+						<a href="Home.html">Home</a>
+					</li>
 
-				<li >
-					<a href="/projects">Projects</a>
-				</li>
+					<li >
+						<a href="/projects">Projects</a>
+					</li>
 
-				<li >
-					<a href="/experience">Experience</a>
+					<li >
+						<a href="/experience">Experience</a>
 
-				<li >
-					<a href="/contact">Contact Me</a>
-				</li>
-			</ul>
-		</nav>
+					<li >
+						<a href="/contact">Contact Me</a>
+					</li>
+				</ul>
+			</nav>
 			<div class="title-wrapper">
-				<h1>Hi, my name is Kevin</h1>
-				<h1>and</h1>
-				<h1>I'M A DEVELOPER</h1>
+				<h1 class="normal">Hi, my name is Kevin</h1>
+				<h1 class="bold">I'M A DEVELOPER</h1>
+				<a href="google.ca">
+					<button class="main-button">
+						<span>CONTACT ME</span>
+					</button> 
+				</a>
 			</div>
+
 		</div>
 		<div class="first-row">
 			<header>
@@ -96,7 +102,9 @@
 			<div class="wrapper">
 				<img src="/Me/Resource/resume.png" alt="resume.png" class="fade-in"/>
 			</div>
-			<div class="row-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+			<div class="row-text">
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+			</div>
 		</div>
 		<div class="third-row">
 			<img src="/Me/Resource/test.jpg" alt="test" class="fade-in"/>

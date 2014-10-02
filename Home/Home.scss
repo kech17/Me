@@ -58,7 +58,8 @@ body, html, main {
 }
 /**** Main Row ****/
 .fixed-row {
-  height: 650px;
+  height: 700px;
+  //position:fixed;
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -66,24 +67,49 @@ body, html, main {
 }
 
 .main-row {
-  background-image: url("https://unsplash.imgix.net/38/awhCbhLqRceCdjcPQUnn_IMG_0249.jpg?q=75&fm=jpg&auto=format&s=fcf2a021ec09fd518e191a76f968cab5");
+  background-image: url("/Me/Resource/large.png");
 }
 .title-wrapper {
-  display:table;
-  max-width:730px;
   text-align:center;
   height:100%;
-  position:relative;
+  position:fixed;
   margin:0 auto;
-  padding: 20% 30px 0 30px;
+  padding-top:20%;
   width:100%;
 }
 .title-wrapper h1 {
   vertical-align: middle;
-  font-weight: bold;
-  color: $Green;
   line-height: 1.2em;
+}
+.title-wrapper .bold{
+  font-weight: bold;
+  color: $White;
+  font-size: 400%;
   font-family: 'Montserrat', sans-serif;
+  letter-spacing: 5px;
+}
+.title-wrapper .normal{
+  color:$Green;
+  font-size: 200%;
+  font-family:'Droid Serif', serif;
+}
+.main-button{
+  border-radius:50px;
+  border:3px solid $Green;
+  overflow:hidden;
+  color:$Green;
+  background:transparent;
+  width:20%;
+  height:8%;
+  span{
+    font-weight:bold;
+    font-size:120%;
+    font-family: 'Montserrat', sans-serif;
+  }
+}
+.main-button :hover{
+    transition: all 0.5s ease-in-out;
+    background:$Grey;
 }
 
 /**** First Row ****/
