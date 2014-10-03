@@ -7,9 +7,10 @@ $Grey:      #CFCFC4;
 $Purple:    #B39EB5;
 $Dark:      #37353a;
 $Green:     #77DD77;
-
+$LightGrey: #e6e6e6;
 $rowSize:   600px;
-
+$squareText: 'Montserrat', sans-serif;
+$fancyText:  'Droid Serif', serif;
 /**** Body Congif ****/
 body {
   margin:0;
@@ -35,7 +36,10 @@ body, html, main {
 }
 .main-menu a{ 
   color: $White; 
-  font-weight:bold;
+  font-family: $squareText;
+  letter-spacing:5px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
 }
 .main-menu a:hover, .main-menu .current a{
   color:#989898;
@@ -59,7 +63,6 @@ body, html, main {
 /**** Main Row ****/
 .fixed-row {
   height: 700px;
-  //position:fixed;
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -67,7 +70,7 @@ body, html, main {
 }
 
 .main-row {
-  background-image: url("/Me/Resource/large.png");
+  background-image: url('/Me/Resource/large.png');
 }
 .title-wrapper {
   text-align:center;
@@ -82,16 +85,18 @@ body, html, main {
   line-height: 1.2em;
 }
 .title-wrapper .bold{
-  font-weight: bold;
   color: $White;
-  font-size: 400%;
-  font-family: 'Montserrat', sans-serif;
+  font: {
+    weight:bold;
+    family:$squareText;
+    size:400%;
+  }
   letter-spacing: 5px;
 }
 .title-wrapper .normal{
   color:$Green;
   font-size: 200%;
-  font-family:'Droid Serif', serif;
+  font-family: $fancyText;
 }
 .main-button{
   border-radius:50px;
@@ -101,23 +106,50 @@ body, html, main {
   background:transparent;
   width:20%;
   height:8%;
+  transition: all 0.3s ease-in-out;
+  &:hover{
+    background:$Dark;
+    cursor: pointer;
+  }
   span{
-    font-weight:bold;
-    font-size:120%;
-    font-family: 'Montserrat', sans-serif;
+    font: {
+      weight:bold;
+      family:$squareText;
+      size:120%;
+    }
   }
 }
-.main-button :hover{
-    transition: all 0.5s ease-in-out;
-    background:$Grey;
-}
+  
 
 /**** First Row ****/
+.first-row {
+  background: $LightGrey;
+}
+.first-row header{
+  padding-top:1px;
+  text-align:center;
+}
+.first-row {
+  table {
+  text-align:center;
+  width:100%;
+  }
+  h2{
+    color:$Dark;
+    font: {
+      weight:bold;
+      family:$squareText;
+      size:350%;
+    }
+  }
+}
+/**** Second Row ****/
+
 .second-row {
   background: $Blue;
 }
 .second-row .triangle {
-  border-top: 30px solid $Grey;
+  border-top: 30px solid $LightGrey;
 }
 .second-row .wrapper{
   display:inline-block;
@@ -128,19 +160,6 @@ body, html, main {
   width: 400px;
   left: 700px;
   top:50px;
-}
-/**** Second Row ****/
-.first-row {
-  background: $DarkBlue;
-}
-.first-row header{
-  margin:0;
-  padding-top:70px;
-  text-align:center;
-}
-.first-row table {
-  text-align:center;
-  width:100%;
 }
 /**** Third Row ****/
 .third-row {

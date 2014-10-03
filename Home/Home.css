@@ -23,7 +23,10 @@ body, html, main {
 
 .main-menu a {
   color: #FFFFFF;
-  font-weight: bold; }
+  font-family: "Montserrat", sans-serif;
+  letter-spacing: 5px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out; }
 
 .main-menu a:hover, .main-menu .current a {
   color: #989898; }
@@ -67,16 +70,16 @@ body, html, main {
   line-height: 1.2em; }
 
 .title-wrapper .bold {
-  font-weight: bold;
   color: #FFFFFF;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
   font-size: 400%;
-  font-family: 'Montserrat', sans-serif;
   letter-spacing: 5px; }
 
 .title-wrapper .normal {
   color: #77DD77;
   font-size: 200%;
-  font-family: 'Droid Serif', serif; }
+  font-family: "Droid Serif", serif; }
 
 .main-button {
   border-radius: 50px;
@@ -85,22 +88,39 @@ body, html, main {
   color: #77DD77;
   background: transparent;
   width: 20%;
-  height: 8%; }
+  height: 8%;
+  transition: all 0.3s ease-in-out; }
+  .main-button:hover {
+    background: #37353a;
+    cursor: pointer; }
   .main-button span {
     font-weight: bold;
-    font-size: 120%;
-    font-family: 'Montserrat', sans-serif; }
-
-.main-button :hover {
-  transition: all 0.5s ease-in-out;
-  background: #CFCFC4; }
+    font-family: "Montserrat", sans-serif;
+    font-size: 120%; }
 
 /**** First Row ****/
+.first-row {
+  background: #e6e6e6; }
+
+.first-row header {
+  padding-top: 1px;
+  text-align: center; }
+
+.first-row table {
+  text-align: center;
+  width: 100%; }
+.first-row h2 {
+  color: #37353a;
+  font-weight: bold;
+  font-family: "Montserrat", sans-serif;
+  font-size: 350%; }
+
+/**** Second Row ****/
 .second-row {
   background: #779ECB; }
 
 .second-row .triangle {
-  border-top: 30px solid #CFCFC4; }
+  border-top: 30px solid #e6e6e6; }
 
 .second-row .wrapper {
   display: inline-block; }
@@ -111,19 +131,6 @@ body, html, main {
   width: 400px;
   left: 700px;
   top: 50px; }
-
-/**** Second Row ****/
-.first-row {
-  background: #1D2F43; }
-
-.first-row header {
-  margin: 0;
-  padding-top: 70px;
-  text-align: center; }
-
-.first-row table {
-  text-align: center;
-  width: 100%; }
 
 /**** Third Row ****/
 .third-row {

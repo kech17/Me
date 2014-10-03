@@ -1,20 +1,20 @@
 <!doctype html>
 <html>
 	<head>
-		<meta charset="utf-8">
+		<meta charset='utf-8'>
 		<title>Me</title>
 
 		<!-- jQuery Library -->
-		<script src="/Me/jQuery/jquery-1.11.1.min.js"></script>
-		<script src="/Me/jQuery/jquery-ui.min.js"></script>
-		<link rel="stylesheet" type="text/css" href="/Me/jQuery/jquery-ui.min.css">
-		<link rel="stylesheet" type="text/css" href="/Me/jQuery/jquery-ui.structure.min.css">
+		<script src='/Me/jQuery/jquery-1.11.1.min.js'></script>
+		<script src='/Me/jQuery/jquery-ui.min.js'></script>
+		<link rel='stylesheet' type='text/css' href='/Me/jQuery/jquery-ui.min.css'>
+		<link rel='stylesheet' type='text/css' href='/Me/jQuery/jquery-ui.structure.min.css'>
 
 		<!-- Home Stylesheet -->
-		<link rel="stylesheet" type="text/css" href="Home.css">
+		<link rel='stylesheet' type='text/css' href='Home.css'>
 
 		<!-- Google Fonts -->
-		<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Montserrat">
+		<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Montserrat'>
 		<link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
 
 		<script>
@@ -26,7 +26,7 @@
 						var bottom_of_object = $(this).offset().top + $(this).outerHeight();
 						/* If the object is completely visible in the window, fade it it */
 						if (bottom_of_window > bottom_of_object - $(this).outerHeight() / 2) {
-							$(this).animate({
+							$(this).stop().animate({
 								opacity : 1,
 								marginLeft : '+=' + fadeFromLeft
 							}, 500);
@@ -34,12 +34,18 @@
 							$(this).addClass('fade-in-shown');
 						}
 					});
-					var offset = $('.first-row').offset().top;
+					var offset = $('.first-row').offset().top-45;
 					if ($(window).scrollTop() > offset) {
-						$('.main-menu').animate({
-							backgroundColor : "#FFFFFF",
-							boxShadow : "0 2px 6px rgba(0, 0, 0, 0.2)",
+						$('.main-menu').stop().animate({
+							backgroundColor : '#37353a',
+							boxShadow : '0 2px 6px rgba(0, 0, 0, 0.2)',
 							top : '0px'
+						}, 500);
+					}
+					console.log($(window).scrollTop());
+					if ($(window).scrollTop()<150) {
+						$('.main-menu').stop().animate({
+							backgroundColor: 'transparent'
 						}, 500);
 					}
 				});
@@ -48,68 +54,68 @@
 	</head>
 
 	<body>
-		<div class="fixed-row main-row">
-			<nav class="main-menu">
+		<div class='fixed-row main-row'>
+			<nav class='main-menu'>
 				<ul>
-					<li class="current">
-						<a href="Home.html">Home</a>
+					<li class='current'>
+						<a href='Home.html'>Home</a>
 					</li>
 
 					<li >
-						<a href="/projects">Projects</a>
+						<a href='/projects'>Projects</a>
 					</li>
 
 					<li >
-						<a href="/experience">Experience</a>
+						<a href='/experience'>Experience</a>
 
 					<li >
-						<a href="/contact">Contact Me</a>
+						<a href='/contact'>Contact Me</a>
 					</li>
 				</ul>
 			</nav>
-			<div class="title-wrapper">
-				<h1 class="normal">Hi, my name is Kevin</h1>
-				<h1 class="bold">I'M A DEVELOPER</h1>
-				<a href="google.ca">
-					<button class="main-button">
-						<span>CONTACT ME</span>
-					</button> 
-				</a>
+			<div class='title-wrapper'>
+				<h1 class='normal'>Hi, my name is Kevin</h1>
+				<h1 class='bold'>I'M A DEVELOPER</h1>
+					<a href='google.ca'>
+						<button class='main-button'>
+							<span>CONTACT ME</span>
+						</button> 
+					</a>
 			</div>
 
 		</div>
-		<div class="first-row">
+		<div class='first-row'>
 			<header>
 				<h2>about me.</h2>
 			</header>
 			<table>
 				<tr>
-					<td>table pic1</td>
-					<td>table pic2</td>
-					<td>table pic3</td>
-					<td>table pic4</td>
+					<td class='table-img'>table pic1</td>
+					<td class='table-img'>table pic2</td>
+					<td class='table-img'>table pic3</td>
+					<td class='table-img'>table pic4</td>
 				</tr>
 				<tr>
-					<td>caption1</td>
-					<td>caption2</td>
-					<td>caption3</td>
-					<td>caption4</td>
+					<td class='table-text'>caption1</td>
+					<td class='table-text'>caption2</td>
+					<td class='table-text'>caption3</td>
+					<td class='table-text'>caption4</td>
 				</tr>
 			</table>
 		</div>
-		<div class="second-row">
-			<div class="triangle"></div>
-			<div class="wrapper">
-				<img src="/Me/Resource/resume.png" alt="resume.png" class="fade-in"/>
+		<div class='second-row'>
+			<div class='triangle'></div>
+			<div class='wrapper'>
+				<img src='/Me/Resource/resume.png' alt='resume.png' class='fade-in'/>
 			</div>
-			<div class="row-text">
+			<div class='row-text'>
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 			</div>
 		</div>
-		<div class="third-row">
-			<img src="/Me/Resource/test.jpg" alt="test" class="fade-in"/>
+		<div class='third-row'>
+			<img src='/Me/Resource/test.jpg' alt='test' class='fade-in'/>
 		</div>
-		<div class="footer">
+		<div class='footer'>
 			This is footer
 		</div>
 	</body>
