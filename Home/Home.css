@@ -62,7 +62,7 @@ body, html, main {
   height: 100%;
   position: fixed;
   margin: 0 auto;
-  padding-top: 20%;
+  padding-top: 12%;
   width: 100%; }
 
 .title-wrapper h1 {
@@ -108,7 +108,16 @@ body, html, main {
 
 .first-row table {
   text-align: center;
-  width: 100%; }
+  table-layout: fixed;
+  width: 100%;
+  padding: 0 100px; }
+  .first-row table .main-icons {
+    max-width: 200px; }
+  .first-row table td {
+    padding: 0 50px; }
+  .first-row table p {
+    font-family: "Montserrat", sans-serif;
+    font-color: #37353a; }
 .first-row h2 {
   color: #37353a;
   font-weight: bold;
@@ -117,7 +126,7 @@ body, html, main {
 
 /**** Second Row ****/
 .second-row {
-  background: #779ECB; }
+  background: #37353a; }
 
 .second-row .triangle {
   border-top: 30px solid #e6e6e6; }
@@ -134,7 +143,10 @@ body, html, main {
 
 /**** Third Row ****/
 .third-row {
-  background: #779ECB; }
+  background: #e6e6e6; }
+
+.third-row .triangle {
+  border-top: 30px solid #37353a; }
 
 /**** Fade In ****/
 .fade-in {
