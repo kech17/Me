@@ -3,7 +3,7 @@ $White:     #FFFFFF;
 $DarkBlue:  #1D2F43;
 $Blue:      #779ECB;
 $LightBlue: #E8EDE9;
-$Grey:      #CFCFC4;
+$Grey:      #bdbdbd;
 $Purple:    #B39EB5;
 $Dark:      #37353a;
 $Green:     #77DD77;
@@ -59,6 +59,9 @@ body, html, main {
   height:0%;
   border-left: 40px solid transparent;
   border-right: 40px solid transparent;
+}
+button:focus{
+  outline: none;
 }
 /**** Main Row ****/
 .fixed-row {
@@ -140,6 +143,16 @@ body, html, main {
     }
     td{
       padding:0 50px;
+      img {
+        border-radius:100%;
+        transition: all 0.3s ease-in-out;
+        &:hover{
+          color:$Dark;
+          transform: scale(0.8,0.8);
+          cursor: pointer;
+          
+        }
+      }
     }
     p {
       font: {
@@ -148,8 +161,12 @@ body, html, main {
       }
     }
   }
+  .title {
+    font-size: 150%;
+  }
   h2{
     color:$Dark;
+    
     font: {
       weight:bold;
       family:$squareText;
@@ -160,29 +177,55 @@ body, html, main {
 /**** Second Row ****/
 
 .second-row {
-  background: $Dark;
+  background: $Grey;
 }
 .second-row .triangle {
   border-top: 30px solid $LightGrey;
 }
-.second-row .wrapper{
-  display:inline-block;
-}
-.second-row .row-text{
-  position: absolute;
-  margin-right: 10%;
-  width: 400px;
-  left: 700px;
-  top:50px;
-}
 /**** Third Row ****/
 .third-row {
   background: $LightGrey;
+  h2{
+    color:$Dark;
+    margin:0px;
+    padding-top:40px;
+    text-align:center;
+    font: {
+      weight:bold;
+      family:$squareText;
+      size:350%;
+    }
+  }
+  .cbp-mc-column {
+    label {
+      font: {
+        weight:bold;
+        family:$squareText;
+      }
+    }
+    input, textarea {
+      border: 3px solid $Dark;
+    }
+  }
+  .button-wrapper {
+      text-align:center;
+      .main-button {
+        border:3px solid $Dark;
+        color: $Dark;
+        min-height:60px;
+        margin-top:30px;
+        &:hover{
+          border:3px solid $Green;
+          color: $Green;
+          background: transparent;
+          cursor: pointer;
+        }
+      }
+    }
 }
 .third-row .triangle {
-  border-top: 30px solid $Dark;
+  border-top: 30px solid $Grey;
 }
-
 /**** Fade In ****/
 .fade-in {
   opacity:0 ;
@@ -190,6 +233,6 @@ body, html, main {
 
 /**** Footer ****/
 .footer {
-  height:300px;
+  height:250px;
   background: $Dark;
 }

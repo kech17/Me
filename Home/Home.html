@@ -17,6 +17,10 @@
 		<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Montserrat'>
 		<link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
 
+		<!-- Contact Form -->
+		<link rel='stylesheet' type='text/css' href='/Me/Home/Resources/component.css'>
+		<script src='/Me/Home/Resources/modernizr.custom.js'></script>
+
 		<script>
 			var fadeFromLeft = 100;
 			$(document).ready(function() {
@@ -34,7 +38,7 @@
 							$(this).addClass('fade-in-shown');
 						}
 					});
-					var offset = $('.first-row').offset().top-45;
+					var offset = $('.first-row').offset().top - 45;
 					if ($(window).scrollTop() > offset) {
 						$('.main-menu').stop().animate({
 							backgroundColor : '#37353a',
@@ -42,12 +46,29 @@
 							top : '0px'
 						}, 500);
 					}
-					console.log($(window).scrollTop());
-					if ($(window).scrollTop()<150) {
+					if ($(window).scrollTop() < 150) {
 						$('.main-menu').stop().animate({
-							backgroundColor: 'transparent'
+							backgroundColor : 'transparent'
 						}, 500);
 					}
+				});
+				$('.text-field').focus(function() {
+					console.log("focus");
+					$(this).prev().css('color', '#77DD77');
+				});
+				$('.text-field').blur(function() {
+					console.log("blur");
+					$(this).prev().css('color', '#37353a');
+				});
+				$("#contact-button").click(function() {
+    				$('html, body').animate({
+				        scrollTop: $(".third-row").offset().top-65
+				    }, 2500);
+				});
+				$("#totop-button").click(function() {
+    				$('html, body').animate({
+				        scrollTop: 0
+				    }, 2500);
 				});
 			});
 		</script>
@@ -66,21 +87,15 @@
 					</li>
 
 					<li >
-						<a href='/experience'>Experience</a>
-
-					<li >
-						<a href='/contact'>Contact Me</a>
-					</li>
+						<a href='/experience'>C.V.</a>
 				</ul>
 			</nav>
 			<div class='title-wrapper'>
 				<h1 class='normal'>Hi, my name is Kevin</h1>
-				<h1 class='bold'>I'M A DEVELOPER</h1>
-					<a href='google.ca'>
-						<button class='main-button'>
-							<span>CONTACT ME</span>
-						</button> 
-					</a>
+				<h1 class='bold'>I AM A DEVELOPER</h1>
+				<button id='contact-button' class='main-button'>
+					<span>CONTACT ME</span>
+				</button>
 			</div>
 
 		</div>
@@ -95,24 +110,59 @@
 					<td class='table-img'><img src='/Me/Resource/keyboard.png'class='main-icons'/></td>
 				</tr>
 				<tr>
-					<td class='table-text'><p>ENGINEERING</p><p>I am studying Honors Electrical Engineering for my undergraduate degree.</p></td>
-					<td class='table-text'><p>STUDENT</p><p>I am currently enrolled in the University of Waterloo in Waterloo, Canada.</p></td>
-					<td class='table-text'><p>SOFTWARE AND HARDWARE</p><p>I have both programming and hardware configuring experience</p></td>
+					<td class='table-text'>
+					<p class='title'>
+						ENGINEERING
+					</p>
+					<p>
+						I am studying Honors Electrical Engineering for my undergraduate degree.
+					</p></td>
+					<td class='table-text'>
+					<p class='title'>
+						STUDENT
+					</p>
+					<p>
+						I am currently enrolled at the University of Waterloo in Waterloo, Canada.
+					</p></td>
+					<td class='table-text'>
+					<p class='title'>
+						TECHNICAL SKILLS
+					</p>
+					<p>
+						I have both software and hardware experience!
+					</p></td>
 				</tr>
 			</table>
 		</div>
 		<div class='second-row'>
 			<div class='triangle'></div>
-			<div class='wrapper'>
-				<img src='/Me/Resource/resume.png' alt='resume.png' class='fade-in'/>
-			</div>
-			<div class='row-text'>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-			</div>
+			
 		</div>
 		<div class='third-row'>
 			<div class='triangle'></div>
-			<img src='/Me/Resource/test.jpg' alt='test' class='fade-in'/>
+			<header>
+				<h2>contact me.</h2>
+			</header>
+
+			<form class="cbp-mc-form">
+				<div class="cbp-mc-column">
+					<label for="first_name">First Name</label>
+					<input class='text-field' type="text" id="first_name" name="first_name" >
+					<label for="last_name">Last Name</label>
+					<input class='text-field' ype="text" id="last_name" name="last_name" >
+					<label for="email">Email Address</label>
+					<input class='text-field' type="text" id="email" name="email">
+				</div>
+				<div class="cbp-mc-column">
+					<label for="message">Your Message</label>
+					<textarea class='text-field' id="message" name="message"></textarea>
+				</div>
+				<div class='button-wrapper'>
+					<button id='send-button' class='main-button'>
+						<span>SEND MESSAGE</span>
+					</button>
+				</div>
+			</form>
 		</div>
 		<div class='footer'>
 			This is footer

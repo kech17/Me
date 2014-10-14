@@ -46,6 +46,9 @@ body, html, main {
   border-left: 40px solid transparent;
   border-right: 40px solid transparent; }
 
+button:focus {
+  outline: none; }
+
 /**** Main Row ****/
 .fixed-row {
   height: 700px;
@@ -115,9 +118,18 @@ body, html, main {
     max-width: 200px; }
   .first-row table td {
     padding: 0 50px; }
+    .first-row table td img {
+      border-radius: 100%;
+      transition: all 0.3s ease-in-out; }
+      .first-row table td img:hover {
+        color: #37353a;
+        transform: scale(0.8, 0.8);
+        cursor: pointer; }
   .first-row table p {
     font-family: "Montserrat", sans-serif;
     font-color: #37353a; }
+.first-row .title {
+  font-size: 150%; }
 .first-row h2 {
   color: #37353a;
   font-weight: bold;
@@ -126,27 +138,42 @@ body, html, main {
 
 /**** Second Row ****/
 .second-row {
-  background: #37353a; }
+  background: #bdbdbd; }
 
 .second-row .triangle {
   border-top: 30px solid #e6e6e6; }
 
-.second-row .wrapper {
-  display: inline-block; }
-
-.second-row .row-text {
-  position: absolute;
-  margin-right: 10%;
-  width: 400px;
-  left: 700px;
-  top: 50px; }
-
 /**** Third Row ****/
 .third-row {
   background: #e6e6e6; }
+  .third-row h2 {
+    color: #37353a;
+    margin: 0px;
+    padding-top: 40px;
+    text-align: center;
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif;
+    font-size: 350%; }
+  .third-row .cbp-mc-column label {
+    font-weight: bold;
+    font-family: "Montserrat", sans-serif; }
+  .third-row .cbp-mc-column input, .third-row .cbp-mc-column textarea {
+    border: 3px solid #37353a; }
+  .third-row .button-wrapper {
+    text-align: center; }
+    .third-row .button-wrapper .main-button {
+      border: 3px solid #37353a;
+      color: #37353a;
+      min-height: 60px;
+      margin-top: 30px; }
+      .third-row .button-wrapper .main-button:hover {
+        border: 3px solid #77DD77;
+        color: #77DD77;
+        background: transparent;
+        cursor: pointer; }
 
 .third-row .triangle {
-  border-top: 30px solid #37353a; }
+  border-top: 30px solid #bdbdbd; }
 
 /**** Fade In ****/
 .fade-in {
@@ -154,5 +181,5 @@ body, html, main {
 
 /**** Footer ****/
 .footer {
-  height: 300px;
+  height: 250px;
   background: #37353a; }
