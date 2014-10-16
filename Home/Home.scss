@@ -8,9 +8,16 @@ $Purple:    #B39EB5;
 $Dark:      #37353a;
 $Green:     #77DD77;
 $LightGrey: #e6e6e6;
-$rowSize:   600px;
+$rowSize:   550px;
 $squareText: 'Montserrat', sans-serif;
 $fancyText:  'Droid Serif', serif;
+
+/**** Foundation Changes ****/
+button:hover, button:focus, .button:hover, .button:focus {
+    background-color: transparent; }
+  button:hover, button:focus, .button:hover, .button:focus {
+    color: $Green; }
+
 /**** Body Congif ****/
 body {
   margin:0;
@@ -86,6 +93,7 @@ button:focus{
 .title-wrapper h1 {
   vertical-align: middle;
   line-height: 1.2em;
+  margin-bottom:4%;
 }
 .title-wrapper .bold{
   color: $White;
@@ -107,15 +115,15 @@ button:focus{
   overflow:hidden;
   color:$Green;
   background:transparent;
-  width:20%;
-  height:8%;
   transition: all 0.3s ease-in-out;
   &:hover{
     background:$Dark;
+    color: $Green;
     cursor: pointer;
   }
   span{
     font: {
+      letter-spacing: 5px;
       weight:bold;
       family:$squareText;
       size:120%;
@@ -133,26 +141,20 @@ button:focus{
   text-align:center;
 }
 .first-row {
-  table {
-    text-align:center;
-    table-layout:fixed;
-    width:100%;
-    padding: 0 100px;
-    .main-icons {
-      max-width:200px;
+  h2{
+    color:$Dark;
+    padding-top:20px;
+    font: {
+      weight:bold;
+      family:$squareText;
+      size:350%;
     }
-    td{
-      padding:0 50px;
-      img {
-        border-radius:100%;
-        transition: all 0.3s ease-in-out;
-        &:hover{
-          color:$Dark;
-          transform: scale(0.8,0.8);
-          cursor: pointer;
-          
-        }
-      }
+  }
+  .columns{
+    text-align:center;
+    .main-icons {
+      padding-right:15%;
+      padding-left:15%;
     }
     p {
       font: {
@@ -160,20 +162,14 @@ button:focus{
         color:$Dark;
       }
     }
-  }
-  .title {
-    font-size: 150%;
-  }
-  h2{
-    color:$Dark;
-    
-    font: {
-      weight:bold;
-      family:$squareText;
-      size:350%;
+    .title {
+      padding-top:20px;
+      font-size: 150%;
+      font-weight:bold;
     }
   }
 }
+
 /**** Second Row ****/
 
 .second-row {

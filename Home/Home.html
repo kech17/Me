@@ -1,14 +1,18 @@
-<!doctype html>
-<html>
+<!DOCTYPE html>
+<!--[if IE 9]><html class="lt-ie10" lang="en" > <![endif]-->
+<html class="no-js" lang="en" >
+
 	<head>
-		<meta charset='utf-8'>
+		<meta charset="utf-8">
+		<!-- If you delete this meta tag World War Z will become a reality -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Me</title>
 
-		<!-- jQuery Library -->
-		<script src='/Me/jQuery/jquery-1.11.1.min.js'></script>
-		<script src='/Me/jQuery/jquery-ui.min.js'></script>
-		<link rel='stylesheet' type='text/css' href='/Me/jQuery/jquery-ui.min.css'>
-		<link rel='stylesheet' type='text/css' href='/Me/jQuery/jquery-ui.structure.min.css'>
+		<!-- If you are using the CSS version, only link these 2 files, you may add app.css to use for your overrides if you like -->
+		<link rel="stylesheet" href="/Me/css/normalize.css">
+		<link rel="stylesheet" href="/Me/css/foundation.css">
+
+		<script src="/Me/js/vendor/modernizr.js"></script>
 
 		<!-- Home Stylesheet -->
 		<link rel='stylesheet' type='text/css' href='Home.css'>
@@ -21,9 +25,116 @@
 		<link rel='stylesheet' type='text/css' href='/Me/Home/Resources/component.css'>
 		<script src='/Me/Home/Resources/modernizr.custom.js'></script>
 
+	</head>
+	<body>
+
+		<div class='fixed-row main-row'>
+			<nav class='main-menu'>
+				<ul>
+					<li class='current'>
+						<a href='Home.html'>Home</a>
+					</li>
+
+					<li >
+						<a href='/projects'>Projects</a>
+					</li>
+
+					<li >
+						<a href='/experience'>C.V.</a>
+				</ul>
+			</nav>
+			<div class='title-wrapper'>
+				<h1 class='normal'>Hi, my name is Kevin</h1>
+				<h1 class='bold'>I AM A DEVELOPER</h1>
+				<button id='contact-button' class='main-button'>
+					<span>CONTACT ME</span>
+				</button>
+			</div>
+
+		</div>
+		<div class='first-row'>
+			<header>
+				<h2>about me.</h2>
+			</header>
+			<div class='row'>
+				<div class='small-4 large-4 columns'><img src='/Me/Resource/rocket.png' class='main-icons'/></div>
+				<div class='small-4 large-4 columns'><img src='/Me/Resource/book.png'class='main-icons'/></div>
+				<div class='small-4 large-4 columns'><img src='/Me/Resource/keyboard.png'class='main-icons'/></div>
+			</div>
+			<div class='row'>
+				<div class='small-4 large-4 columns'>
+					<p class='title'>
+						ENGINEERING
+					</p>
+				</div>
+				<div class='small-4 large-4 columns'>
+					<p class='title'>
+						STUDENT
+					</p>
+				</div>
+				<div class='small-4 large-4 columns'>
+					<p class='title'>
+						TECHNICAL SKILLS
+					</p>
+				</div>
+			</div>
+			<div class='row'>
+				<div class='small-4 large-4 columns'>
+					<p>
+						I am studying Honors Electrical Engineering for my undergraduate degree.
+					</p>
+				</div>
+				<div class='small-4 large-4 columns'>
+					<p>
+						I am currently enrolled at the University of Waterloo in Waterloo, Canada.
+					</p>
+				</div>
+				<div class='small-4 large-4 columns'>
+					<p>
+						I have both software and hardware experience!
+					</p>
+				</div>
+			</div>
+		</div>
+		<div class='second-row'>
+			<div class='triangle'></div>
+		</div>
+		<div class='third-row'>
+			<div class='triangle'></div>
+			<header>
+				<h2>contact me.</h2>
+			</header>
+
+			<form class="cbp-mc-form">
+				<div class="cbp-mc-column">
+					<label for="first_name">First Name</label>
+					<input class='text-field' type="text" id="first_name" name="first_name" >
+					<label for="last_name">Last Name</label>
+					<input class='text-field' ype="text" id="last_name" name="last_name" >
+					<label for="email">Email Address</label>
+					<input class='text-field' type="text" id="email" name="email">
+				</div>
+				<div class="cbp-mc-column">
+					<label for="message">Your Message</label>
+					<textarea class='text-field' id="message" name="message"></textarea>
+				</div>
+				<div class='button-wrapper'>
+					<button id='send-button' class='main-button'>
+						<span>SEND MESSAGE</span>
+					</button>
+				</div>
+			</form>
+		</div>
+		<div class='footer'>
+			This is footer
+		</div>
+
+		<script src="js/vendor/jquery.js"></script>
+		<script src="js/foundation.min.js"></script>
 		<script>
+			
 			var fadeFromLeft = 100;
-			$(document).ready(function() {
+			$(document).foundation(function() {
 				$(window).scroll(function() {
 					var bottom_of_window = $(window).scrollTop() + $(window).height();
 					$('.fade-in').each(function(i) {
@@ -61,110 +172,16 @@
 					$(this).prev().css('color', '#37353a');
 				});
 				$("#contact-button").click(function() {
-    				$('html, body').animate({
-				        scrollTop: $(".third-row").offset().top-65
-				    }, 2500);
+					$('html, body').animate({
+						scrollTop : $(".third-row").offset().top - 65
+					}, 2500);
 				});
 				$("#totop-button").click(function() {
-    				$('html, body').animate({
-				        scrollTop: 0
-				    }, 2500);
+					$('html, body').animate({
+						scrollTop : 0
+					}, 2500);
 				});
 			});
 		</script>
-	</head>
-
-	<body>
-		<div class='fixed-row main-row'>
-			<nav class='main-menu'>
-				<ul>
-					<li class='current'>
-						<a href='Home.html'>Home</a>
-					</li>
-
-					<li >
-						<a href='/projects'>Projects</a>
-					</li>
-
-					<li >
-						<a href='/experience'>C.V.</a>
-				</ul>
-			</nav>
-			<div class='title-wrapper'>
-				<h1 class='normal'>Hi, my name is Kevin</h1>
-				<h1 class='bold'>I AM A DEVELOPER</h1>
-				<button id='contact-button' class='main-button'>
-					<span>CONTACT ME</span>
-				</button>
-			</div>
-
-		</div>
-		<div class='first-row'>
-			<header>
-				<h2>about me.</h2>
-			</header>
-			<table>
-				<tr>
-					<td class='table-img'><img src='/Me/Resource/rocket.png' class='main-icons'/></td>
-					<td class='table-img'><img src='/Me/Resource/book.png'class='main-icons'/></td>
-					<td class='table-img'><img src='/Me/Resource/keyboard.png'class='main-icons'/></td>
-				</tr>
-				<tr>
-					<td class='table-text'>
-					<p class='title'>
-						ENGINEERING
-					</p>
-					<p>
-						I am studying Honors Electrical Engineering for my undergraduate degree.
-					</p></td>
-					<td class='table-text'>
-					<p class='title'>
-						STUDENT
-					</p>
-					<p>
-						I am currently enrolled at the University of Waterloo in Waterloo, Canada.
-					</p></td>
-					<td class='table-text'>
-					<p class='title'>
-						TECHNICAL SKILLS
-					</p>
-					<p>
-						I have both software and hardware experience!
-					</p></td>
-				</tr>
-			</table>
-		</div>
-		<div class='second-row'>
-			<div class='triangle'></div>
-			
-		</div>
-		<div class='third-row'>
-			<div class='triangle'></div>
-			<header>
-				<h2>contact me.</h2>
-			</header>
-
-			<form class="cbp-mc-form">
-				<div class="cbp-mc-column">
-					<label for="first_name">First Name</label>
-					<input class='text-field' type="text" id="first_name" name="first_name" >
-					<label for="last_name">Last Name</label>
-					<input class='text-field' ype="text" id="last_name" name="last_name" >
-					<label for="email">Email Address</label>
-					<input class='text-field' type="text" id="email" name="email">
-				</div>
-				<div class="cbp-mc-column">
-					<label for="message">Your Message</label>
-					<textarea class='text-field' id="message" name="message"></textarea>
-				</div>
-				<div class='button-wrapper'>
-					<button id='send-button' class='main-button'>
-						<span>SEND MESSAGE</span>
-					</button>
-				</div>
-			</form>
-		</div>
-		<div class='footer'>
-			This is footer
-		</div>
 	</body>
+</html>
