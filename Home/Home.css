@@ -1,5 +1,9 @@
 /**** Variables ****/
 /**** Foundation Changes ****/
+input[type=text]:focus, textarea:focus {
+  border-width: 2px;
+  border-color: #77DD77; }
+
 button:hover, button:focus, .button:hover, .button:focus {
   background-color: transparent; }
 
@@ -23,6 +27,9 @@ body, html, main {
   position: fixed;
   z-index: 2;
   background: transparent; }
+
+.main-menu ul {
+  padding-top: 4px; }
 
 .main-menu li {
   display: inline-block;
@@ -154,11 +161,17 @@ button:focus {
     font-weight: bold;
     font-family: "Montserrat", sans-serif;
     font-size: 350%; }
-  .third-row .cbp-mc-column label {
-    font-weight: bold;
-    font-family: "Montserrat", sans-serif; }
-  .third-row .cbp-mc-column input, .third-row .cbp-mc-column textarea {
-    border: 3px solid #37353a; }
+  .third-row form .columns {
+    width: 50%; }
+  .third-row form label {
+    font-family: "Montserrat", sans-serif;
+    font-size: 120%;
+    font-weight: bold; }
+  .third-row form input {
+    border-radius: 10px; }
+  .third-row form textarea {
+    border-radius: 10px;
+    height: 200px; }
   .third-row .button-wrapper {
     text-align: center; }
     .third-row .button-wrapper .main-button {

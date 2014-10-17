@@ -4,15 +4,21 @@
 
 	<head>
 		<meta charset="utf-8">
-		<!-- If you delete this meta tag World War Z will become a reality -->
+		<!-- Important Meta Tag -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Me</title>
 
-		<!-- If you are using the CSS version, only link these 2 files, you may add app.css to use for your overrides if you like -->
-		<link rel="stylesheet" href="/Me/css/normalize.css">
-		<link rel="stylesheet" href="/Me/css/foundation.css">
+		<!-- Foundation -->
+		<link rel="stylesheet" href="/Me/Foundation/css/normalize.css">
+		<link rel="stylesheet" href="/Me/Foundation/css/foundation.css">
 
-		<script src="/Me/js/vendor/modernizr.js"></script>
+		<script src="/Me/Foundation/js/vendor/jquery.js"></script>
+		<script src="/Me/Foundation/js/vendor/fastclick.js"></script>
+		<script src="/Me/Foundation/js/vendor/modernizr.js"></script>
+		<script src="/Me/Foundation/js/foundation.min.js"></script>
+		
+		<!-- Chart.js -->
+		<script src='/Me/Chart.js/Chart.min.js'></script>
 
 		<!-- Home Stylesheet -->
 		<link rel='stylesheet' type='text/css' href='Home.css'>
@@ -20,10 +26,6 @@
 		<!-- Google Fonts -->
 		<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Montserrat'>
 		<link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
-
-		<!-- Contact Form -->
-		<link rel='stylesheet' type='text/css' href='/Me/Home/Resources/component.css'>
-		<script src='/Me/Home/Resources/modernizr.custom.js'></script>
 
 	</head>
 	<body>
@@ -57,9 +59,12 @@
 				<h2>about me.</h2>
 			</header>
 			<div class='row'>
-				<div class='small-4 large-4 columns'><img src='/Me/Resource/rocket.png' class='main-icons'/></div>
-				<div class='small-4 large-4 columns'><img src='/Me/Resource/book.png'class='main-icons'/></div>
-				<div class='small-4 large-4 columns'><img src='/Me/Resource/keyboard.png'class='main-icons'/></div>
+				<div class='small-4 large-4 columns'><img src='/Me/Resource/rocket.png' class='main-icons'/>
+				</div>
+				<div class='small-4 large-4 columns'><img src='/Me/Resource/book.png'class='main-icons'/>
+				</div>
+				<div class='small-4 large-4 columns'><img src='/Me/Resource/keyboard.png'class='main-icons'/>
+				</div>
 			</div>
 			<div class='row'>
 				<div class='small-4 large-4 columns'>
@@ -98,90 +103,90 @@
 		</div>
 		<div class='second-row'>
 			<div class='triangle'></div>
+			<canvas id="myChart" width="400" height="400"></canvas>
 		</div>
 		<div class='third-row'>
 			<div class='triangle'></div>
 			<header>
 				<h2>contact me.</h2>
 			</header>
-
-			<form class="cbp-mc-form">
-				<div class="cbp-mc-column">
-					<label for="first_name">First Name</label>
-					<input class='text-field' type="text" id="first_name" name="first_name" >
-					<label for="last_name">Last Name</label>
-					<input class='text-field' ype="text" id="last_name" name="last_name" >
-					<label for="email">Email Address</label>
-					<input class='text-field' type="text" id="email" name="email">
-				</div>
-				<div class="cbp-mc-column">
-					<label for="message">Your Message</label>
-					<textarea class='text-field' id="message" name="message"></textarea>
-				</div>
-				<div class='button-wrapper'>
-					<button id='send-button' class='main-button'>
-						<span>SEND MESSAGE</span>
-					</button>
+			<form>
+				<div class='row'>
+					<div class='large-4 columns'>
+						<label>First Name
+							<input type='text' id='firstName'>
+						</label>
+						<label>Last Name
+							<input type='text' id='lastName'>
+						</label>
+						<label>Email Address
+							<input type='text' id='email'>
+						</label>
+					</div>
+					<div class='large-4 columns'>
+						<label>Your Message 							
+							<textarea id='message'></textarea> 
+						</label>
+					</div>
 				</div>
 			</form>
-		</div>
-		<div class='footer'>
-			This is footer
-		</div>
 
-		<script src="js/vendor/jquery.js"></script>
-		<script src="js/foundation.min.js"></script>
-		<script>
-			
-			var fadeFromLeft = 100;
-			$(document).foundation(function() {
-				$(window).scroll(function() {
-					var bottom_of_window = $(window).scrollTop() + $(window).height();
-					$('.fade-in').each(function(i) {
-						var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-						/* If the object is completely visible in the window, fade it it */
-						if (bottom_of_window > bottom_of_object - $(this).outerHeight() / 2) {
-							$(this).stop().animate({
-								opacity : 1,
-								marginLeft : '+=' + fadeFromLeft
+			<div class='button-wrapper'>
+				<button id='send-button' class='main-button'>
+					<span>SEND MESSAGE</span>
+				</button>
+			</div>
+			<div class='footer'>
+				This is footer
+			</div>
+
+			<script>
+				$(document).foundation();
+				var fadeFromLeft = 100;
+				$(document).ready(function() {
+					$(window).scroll(function() {
+						var bottom_of_window = $(window).scrollTop() + $(window).height();
+						$('.fade-in').each(function(i) {
+							var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+							if (bottom_of_window > bottom_of_object - $(this).outerHeight() / 2) {
+								$(this).stop().animate({
+									opacity : 1,
+									marginLeft : '+=' + fadeFromLeft
+								}, 500);
+								$(this).removeClass('fade-in');
+								$(this).addClass('fade-in-shown');
+							}
+						});
+						var offset = $('.first-row').offset().top - 45;
+						if ($(window).scrollTop() > offset) {
+							$('.main-menu').stop().animate({
+								backgroundColor : '#37353a',
+								boxShadow : '0 2px 6px rgba(0, 0, 0, 0.2)',
+								top : '0px'
 							}, 500);
-							$(this).removeClass('fade-in');
-							$(this).addClass('fade-in-shown');
+							/*$('.main-menu').css({
+								'background-color': '#37353a',
+								'box-shadow' : '0 2px 6px rgba(0, 0, 0, 0.2)',
+								'top' : '0px'
+							});*/
+						}
+						if ($(window).scrollTop() < 150) {
+							$('.main-menu').stop().animate({
+								backgroundColor : 'transparent'
+							}, 500);
 						}
 					});
-					var offset = $('.first-row').offset().top - 45;
-					if ($(window).scrollTop() > offset) {
-						$('.main-menu').stop().animate({
-							backgroundColor : '#37353a',
-							boxShadow : '0 2px 6px rgba(0, 0, 0, 0.2)',
-							top : '0px'
-						}, 500);
-					}
-					if ($(window).scrollTop() < 150) {
-						$('.main-menu').stop().animate({
-							backgroundColor : 'transparent'
-						}, 500);
-					}
+					$("#contact-button").click(function() {
+						$('html, body').animate({
+							scrollTop : $(".third-row").offset().top - 65
+						}, 2500);
+					});
+					$("#send-button").click(function() {
+						$('html, body').animate({
+							scrollTop : 0
+						}, 2500);
+					});
 				});
-				$('.text-field').focus(function() {
-					console.log("focus");
-					$(this).prev().css('color', '#77DD77');
-				});
-				$('.text-field').blur(function() {
-					console.log("blur");
-					$(this).prev().css('color', '#37353a');
-				});
-				$("#contact-button").click(function() {
-					$('html, body').animate({
-						scrollTop : $(".third-row").offset().top - 65
-					}, 2500);
-				});
-				$("#totop-button").click(function() {
-					$('html, body').animate({
-						scrollTop : 0
-					}, 2500);
-				});
-			});
-		</script>
+			</script>
 	</body>
 </html>

@@ -13,9 +13,13 @@ $squareText: 'Montserrat', sans-serif;
 $fancyText:  'Droid Serif', serif;
 
 /**** Foundation Changes ****/
+input[type=text]:focus, textarea:focus {
+  border-width:2px;
+  border-color:$Green;
+}
 button:hover, button:focus, .button:hover, .button:focus {
     background-color: transparent; }
-  button:hover, button:focus, .button:hover, .button:focus {
+button:hover, button:focus, .button:hover, .button:focus {
     color: $Green; }
 
 /**** Body Congif ****/
@@ -36,6 +40,9 @@ body, html, main {
   position:fixed;
   z-index: 2;
   background: transparent;
+}
+.main-menu ul {
+  padding-top:4px;
 }
 .main-menu li{
   display: inline-block; 
@@ -192,15 +199,23 @@ button:focus{
       size:350%;
     }
   }
-  .cbp-mc-column {
+  form {
+    .columns {
+      width:50%;
+    }
     label {
       font: {
-        weight:bold;
-        family:$squareText;
+        family: $squareText;
+        size:120%;
+        weight: bold;
       }
     }
-    input, textarea {
-      border: 3px solid $Dark;
+    input {
+      border-radius:10px;
+    }
+    textarea {
+      border-radius:10px;
+      height:200px;
     }
   }
   .button-wrapper {
