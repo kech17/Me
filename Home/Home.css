@@ -136,8 +136,8 @@ button:focus {
     padding-right: 15%;
     padding-left: 15%; }
   .first-row .columns p {
-    font-family: "Montserrat", sans-serif;
-    font-color: #37353a; }
+    color: #37353a;
+    font-family: "Montserrat", sans-serif; }
   .first-row .columns .title {
     padding-top: 20px;
     font-size: 150%;
@@ -145,10 +145,20 @@ button:focus {
 
 /**** Second Row ****/
 .second-row {
-  background: #bdbdbd; }
-
-.second-row .triangle {
-  border-top: 30px solid #e6e6e6; }
+  background: #37353a; }
+  .second-row .triangle {
+    border-top: 30px solid #e6e6e6; }
+  .second-row .columns {
+    padding-top: 40px; }
+  .second-row p {
+    color: #FFFFFF;
+    font-family: "Open Sans", sans-serif; }
+  .second-row h2 {
+    color: #FFFFFF;
+    margin: 0px;
+    padding-bottom: 20px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold; }
 
 /**** Third Row ****/
 .third-row {
@@ -194,5 +204,5 @@ button:focus {
 
 /**** Footer ****/
 .footer {
-  height: 250px;
+  height: 200px;
   background: #37353a; }

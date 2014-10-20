@@ -16,7 +16,7 @@
 		<script src="/Me/Foundation/js/vendor/fastclick.js"></script>
 		<script src="/Me/Foundation/js/vendor/modernizr.js"></script>
 		<script src="/Me/Foundation/js/foundation.min.js"></script>
-		
+
 		<!-- Chart.js -->
 		<script src='/Me/Chart.js/Chart.min.js'></script>
 
@@ -26,6 +26,7 @@
 		<!-- Google Fonts -->
 		<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Montserrat'>
 		<link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css'>
 
 	</head>
 	<body>
@@ -103,7 +104,22 @@
 		</div>
 		<div class='second-row'>
 			<div class='triangle'></div>
-			<canvas id="myChart" width="400" height="400"></canvas>
+			<div class='row'>
+				<div class='small-12 large-7 columns'>
+					<h2>who I am. what I want to be.</h2>
+					<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				<br><br>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+					</p>
+					<button id='resume-button' class='main-button'>
+					<span>MY RESUME</span>
+				</button>
+				</div>
+				<div class='small-12 large-5 columns'>
+					<img src='/Me/Resource/text.png'/>
+				</div>
+			</div>
 		</div>
 		<div class='third-row'>
 			<div class='triangle'></div>
@@ -136,57 +152,59 @@
 					<span>SEND MESSAGE</span>
 				</button>
 			</div>
-			<div class='footer'>
-				This is footer
-			</div>
-
-			<script>
-				$(document).foundation();
-				var fadeFromLeft = 100;
-				$(document).ready(function() {
-					$(window).scroll(function() {
-						var bottom_of_window = $(window).scrollTop() + $(window).height();
-						$('.fade-in').each(function(i) {
-							var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-							if (bottom_of_window > bottom_of_object - $(this).outerHeight() / 2) {
-								$(this).stop().animate({
-									opacity : 1,
-									marginLeft : '+=' + fadeFromLeft
-								}, 500);
-								$(this).removeClass('fade-in');
-								$(this).addClass('fade-in-shown');
-							}
-						});
-						var offset = $('.first-row').offset().top - 45;
-						if ($(window).scrollTop() > offset) {
-							$('.main-menu').stop().animate({
-								backgroundColor : '#37353a',
-								boxShadow : '0 2px 6px rgba(0, 0, 0, 0.2)',
-								top : '0px'
-							}, 500);
-							/*$('.main-menu').css({
-								'background-color': '#37353a',
-								'box-shadow' : '0 2px 6px rgba(0, 0, 0, 0.2)',
-								'top' : '0px'
-							});*/
-						}
-						if ($(window).scrollTop() < 150) {
-							$('.main-menu').stop().animate({
-								backgroundColor : 'transparent'
-							}, 500);
-						}
-					});
-					$("#contact-button").click(function() {
-						$('html, body').animate({
-							scrollTop : $(".third-row").offset().top - 65
-						}, 2500);
-					});
-					$("#send-button").click(function() {
-						$('html, body').animate({
-							scrollTop : 0
-						}, 2500);
-					});
-				});
-			</script>
+		</div>
+		<div class='footer'>
+			This is footer
+		</div>
 	</body>
+	<script src='/Me/Home/customChart.js'></script>
+	<script>
+		$(document).foundation();
+		var fadeFromLeft = 100;
+		$(document).ready(function() {
+			$(window).scroll(function() {
+				var bottom_of_window = $(window).scrollTop() + $(window).height();
+				$('.fade-in').each(function(i) {
+					var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+					if (bottom_of_window > bottom_of_object - $(this).outerHeight() / 2) {
+						$(this).stop().animate({
+							opacity : 1,
+							marginLeft : '+=' + fadeFromLeft
+						}, 500);
+						$(this).removeClass('fade-in');
+						$(this).addClass('fade-in-shown');
+					}
+				});
+				var offset = $('.first-row').offset().top - 45;
+				if ($(window).scrollTop() > offset) {
+					$('.main-menu').stop().animate({
+						backgroundColor : '#37353a',
+						boxShadow : '0 2px 6px rgba(0, 0, 0, 0.2)',
+						top : '0px'
+					}, 500);
+					/*$('.main-menu').css({
+					 'background-color': '#37353a',
+					 'box-shadow' : '0 2px 6px rgba(0, 0, 0, 0.2)',
+					 'top' : '0px'
+					 });*/
+				}
+				if ($(window).scrollTop() < 150) {
+					$('.main-menu').stop().animate({
+						backgroundColor : 'transparent'
+					}, 500);
+				}
+			});
+			$("#contact-button").click(function() {
+				$('html, body').animate({
+					scrollTop : $(".third-row").offset().top - 65
+				}, 2500);
+			});
+			$("#send-button").click(function() {
+				$('html, body').animate({
+					scrollTop : 0
+				}, 2500);
+			});
+		});
+	</script>
+
 </html>

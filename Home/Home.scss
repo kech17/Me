@@ -11,6 +11,7 @@ $LightGrey: #e6e6e6;
 $rowSize:   550px;
 $squareText: 'Montserrat', sans-serif;
 $fancyText:  'Droid Serif', serif;
+$parText:    'Open Sans', sans-serif;
 
 /**** Foundation Changes ****/
 input[type=text]:focus, textarea:focus {
@@ -164,9 +165,10 @@ button:focus{
       padding-left:15%;
     }
     p {
+      color:$Dark;
       font: {
         family:$squareText;
-        color:$Dark;
+        
       }
     }
     .title {
@@ -180,10 +182,28 @@ button:focus{
 /**** Second Row ****/
 
 .second-row {
-  background: $Grey;
-}
-.second-row .triangle {
-  border-top: 30px solid $LightGrey;
+  background: $Dark;
+  .triangle {
+    border-top: 30px solid $LightGrey;
+  }
+  .columns{
+    padding-top: 40px;
+  }
+  p {
+    color:$White;
+    font: {
+      family:$parText;
+    }
+  }
+  h2 {
+    color: $White;
+    margin:0px;
+    padding-bottom:20px;
+    font: {
+      family:$squareText;
+      weight:bold;
+    }
+  }
 }
 /**** Third Row ****/
 .third-row {
@@ -235,7 +255,7 @@ button:focus{
     }
 }
 .third-row .triangle {
-  border-top: 30px solid $Grey;
+  border-top: 30px solid $Dark;
 }
 /**** Fade In ****/
 .fade-in {
@@ -244,6 +264,6 @@ button:focus{
 
 /**** Footer ****/
 .footer {
-  height:250px;
+  height:200px;
   background: $Dark;
 }
