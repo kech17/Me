@@ -37,7 +37,7 @@ body, html, main {
 
 .main-menu a {
   color: #FFFFFF;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Open Sans", sans-serif;
   letter-spacing: 5px;
   text-decoration: none;
   transition: all 0.3s ease-in-out; }
@@ -46,10 +46,9 @@ body, html, main {
   color: #989898; }
 
 /**** Rows General ****/
-.first-row, .second-row, .third-row {
+.first-row, .second-row, .third-row, .fourth-row, .footer {
   position: relative;
-  width: 100%;
-  height: 550px; }
+  width: 100%; }
 
 .triangle {
   position: absolute;
@@ -90,7 +89,7 @@ button:focus {
 .title-wrapper .bold {
   color: #FFFFFF;
   font-weight: bold;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 400%;
   letter-spacing: 5px; }
 
@@ -113,7 +112,7 @@ button:focus {
   .main-button span {
     font-letter-spacing: 5px;
     font-weight: bold;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 120%; }
 
 /**** First Row ****/
@@ -128,7 +127,7 @@ button:focus {
   color: #37353a;
   padding-top: 20px;
   font-weight: bold;
-  font-family: "Montserrat", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 350%; }
 .first-row .columns {
   text-align: center; }
@@ -137,7 +136,7 @@ button:focus {
     padding-left: 15%; }
   .first-row .columns p {
     color: #37353a;
-    font-family: "Montserrat", sans-serif; }
+    font-family: "Open Sans", sans-serif; }
   .first-row .columns .title {
     padding-top: 20px;
     font-size: 150%;
@@ -145,7 +144,9 @@ button:focus {
 
 /**** Second Row ****/
 .second-row {
-  background: #37353a; }
+  background: #37353a;
+  padding-top: 5%;
+  padding-bottom: 5%; }
   .second-row .triangle {
     border-top: 30px solid #e6e6e6; }
   .second-row .columns {
@@ -157,46 +158,75 @@ button:focus {
     color: #FFFFFF;
     margin: 0px;
     padding-bottom: 20px;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-weight: bold; }
+  .second-row #resume-button:hover {
+    background: #504d55;
+    color: #77DD77;
+    cursor: pointer; }
 
 /**** Third Row ****/
 .third-row {
-  background: #e6e6e6; }
+  background: #37353a; }
   .third-row h2 {
+    text-align: center;
+    color: #FFFFFF;
+    margin: 0px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: bold; }
+  .third-row .divider-horizontal {
+    height: 5px;
+    border-radius: 3px;
+    background: #77DD77;
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px; }
+  .third-row .divider-vertical {
+    height: 300px;
+    width: 5px;
+    background: #77DD77;
+    border-radius: 3px;
+    margin-left: auto;
+    margin-right: auto; }
+
+/**** Fourth Row ****/
+.fourth-row {
+  background: #e6e6e6; }
+  .fourth-row h2 {
     color: #37353a;
     margin: 0px;
     padding-top: 40px;
     text-align: center;
     font-weight: bold;
-    font-family: "Montserrat", sans-serif;
+    font-family: "Open Sans", sans-serif;
     font-size: 350%; }
-  .third-row form .columns {
+  .fourth-row form .columns {
     width: 50%; }
-  .third-row form label {
-    font-family: "Montserrat", sans-serif;
+  .fourth-row form label {
+    font-family: "Open Sans", sans-serif;
     font-size: 120%;
     font-weight: bold; }
-  .third-row form input {
+  .fourth-row form input {
     border-radius: 10px; }
-  .third-row form textarea {
+  .fourth-row form textarea {
     border-radius: 10px;
     height: 200px; }
-  .third-row .button-wrapper {
+  .fourth-row .button-wrapper {
     text-align: center; }
-    .third-row .button-wrapper .main-button {
+    .fourth-row .button-wrapper .main-button {
       border: 3px solid #37353a;
       color: #37353a;
       min-height: 60px;
       margin-top: 30px; }
-      .third-row .button-wrapper .main-button:hover {
+      .fourth-row .button-wrapper .main-button:hover {
         border: 3px solid #77DD77;
         color: #77DD77;
         background: transparent;
         cursor: pointer; }
 
-.third-row .triangle {
-  border-top: 30px solid #bdbdbd; }
+.fourth-row .triangle {
+  border-top: 30px solid #37353a; }
 
 /**** Fade In ****/
 .fade-in {

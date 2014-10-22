@@ -6,6 +6,7 @@ $LightBlue: #E8EDE9;
 $Grey:      #bdbdbd;
 $Purple:    #B39EB5;
 $Dark:      #37353a;
+$LightDark: #504d55;
 $Green:     #77DD77;
 $LightGrey: #e6e6e6;
 $rowSize:   550px;
@@ -51,7 +52,7 @@ body, html, main {
 }
 .main-menu a{ 
   color: $White; 
-  font-family: $squareText;
+  font-family: $parText;
   letter-spacing:5px;
   text-decoration: none;
   transition: all 0.3s ease-in-out;
@@ -61,10 +62,9 @@ body, html, main {
 }
 
 /**** Rows General ****/
-.first-row, .second-row, .third-row {
+.first-row, .second-row, .third-row, .fourth-row, .footer {
   position: relative;
   width:100%;
-  height: $rowSize;
 }
 .triangle {
   position:absolute;
@@ -107,7 +107,7 @@ button:focus{
   color: $White;
   font: {
     weight:bold;
-    family:$squareText;
+    family:$parText;
     size:400%;
   }
   letter-spacing: 5px;
@@ -133,7 +133,7 @@ button:focus{
     font: {
       letter-spacing: 5px;
       weight:bold;
-      family:$squareText;
+      family:$parText;
       size:120%;
     }
   }
@@ -154,7 +154,7 @@ button:focus{
     padding-top:20px;
     font: {
       weight:bold;
-      family:$squareText;
+      family:$parText;
       size:350%;
     }
   }
@@ -167,8 +167,7 @@ button:focus{
     p {
       color:$Dark;
       font: {
-        family:$squareText;
-        
+        family:$parText;
       }
     }
     .title {
@@ -183,6 +182,8 @@ button:focus{
 
 .second-row {
   background: $Dark;
+  padding-top: 5%;
+  padding-bottom:5%;
   .triangle {
     border-top: 30px solid $LightGrey;
   }
@@ -200,13 +201,50 @@ button:focus{
     margin:0px;
     padding-bottom:20px;
     font: {
-      family:$squareText;
+      family:$parText;
       weight:bold;
+    }
+  }
+  #resume-button {
+    &:hover{
+      background:$LightDark;
+      color: $Green;
+      cursor: pointer;
     }
   }
 }
 /**** Third Row ****/
 .third-row {
+  background: $Dark;
+  h2 {
+    text-align:center;
+    color: $White;
+    margin:0px;
+    font: {
+      family:$parText;
+      weight:bold;
+    }
+  }
+  .divider-horizontal {
+    height:5px;
+    border-radius:3px;
+    background: $Green;
+    width:40%;
+    margin-left:auto;
+    margin-right:auto;
+    margin-bottom:20px;
+  }
+  .divider-vertical {
+    height:300px;
+    width:5px;
+    background:$Green;
+    border-radius:3px;
+    margin-left:auto;
+    margin-right:auto;
+  }
+}
+/**** Fourth Row ****/ 
+.fourth-row {
   background: $LightGrey;
   h2{
     color:$Dark;
@@ -215,7 +253,7 @@ button:focus{
     text-align:center;
     font: {
       weight:bold;
-      family:$squareText;
+      family:$parText;
       size:350%;
     }
   }
@@ -225,7 +263,7 @@ button:focus{
     }
     label {
       font: {
-        family: $squareText;
+        family: $parText;
         size:120%;
         weight: bold;
       }
@@ -254,7 +292,7 @@ button:focus{
       }
     }
 }
-.third-row .triangle {
+.fourth-row .triangle {
   border-top: 30px solid $Dark;
 }
 /**** Fade In ****/
