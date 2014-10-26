@@ -10,6 +10,9 @@ button:hover, button:focus, .button:hover, .button:focus {
 button:hover, button:focus, .button:hover, .button:focus {
   color: #77DD77; }
 
+.row {
+  max-width: 67rem; }
+
 /**** Body Congif ****/
 body {
   margin: 0; }
@@ -46,18 +49,22 @@ body, html, main {
   color: #989898; }
 
 /**** Rows General ****/
-.first-row, .second-row, .third-row, .fourth-row, .footer {
+h1, h2 {
+  letter-spacing: 6px; }
+
+.first-row, .second-row, .third-row, .filler-row, .fourth-row, .fifth-row, .footer {
   position: relative;
   width: 100%; }
 
-.triangle {
-  position: absolute;
-  top: 0px;
-  left: 46%;
-  width: 0%;
-  height: 0%;
-  border-left: 40px solid transparent;
-  border-right: 40px solid transparent; }
+.triangle-container {
+  margin-left: 46.5%; }
+  .triangle-container .triangle {
+    position: absolute;
+    top: 0px;
+    width: 0%;
+    height: 0%;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent; }
 
 button:focus {
   outline: none; }
@@ -111,7 +118,7 @@ button:focus {
     cursor: pointer; }
   .main-button span {
     font-letter-spacing: 5px;
-    font-weight: bold;
+    font-weight: 300;
     font-family: "Open Sans", sans-serif;
     font-size: 120%; }
 
@@ -136,7 +143,8 @@ button:focus {
     padding-left: 15%; }
   .first-row .columns p {
     color: #37353a;
-    font-family: "Open Sans", sans-serif; }
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300; }
   .first-row .columns .title {
     padding-top: 20px;
     font-size: 150%;
@@ -153,42 +161,67 @@ button:focus {
     padding-top: 40px; }
   .second-row p {
     color: #FFFFFF;
-    font-family: "Open Sans", sans-serif; }
+    font-family: "Open Sans", sans-serif;
+    font-weight: 300; }
   .second-row h2 {
     color: #FFFFFF;
     margin: 0px;
     padding-bottom: 20px;
     font-family: "Open Sans", sans-serif;
     font-weight: bold; }
+  .second-row .tempid {
+    max-width: 70%; }
   .second-row #resume-button:hover {
     background: #504d55;
     color: #77DD77;
     cursor: pointer; }
 
 /**** Third Row ****/
-.third-row {
-  background: #37353a; }
-  .third-row h2 {
-    text-align: center;
-    color: #FFFFFF;
-    margin: 0px;
+.stat-row img, .third-row img, .fifth-row img {
+  max-height: 100px; }
+.stat-row .row, .third-row .row, .fifth-row .row {
+  max-width: 70rem; }
+.stat-row .padding-bot-top, .third-row .padding-bot-top, .fifth-row .padding-bot-top {
+  padding-bottom: 7%;
+  padding-top: 7%; }
+.stat-row .stat-title, .third-row .stat-title, .fifth-row .stat-title {
+  text-align: center;
+  padding-top: 3%;
+  padding-bottom: 3%; }
+  .stat-row .stat-title h2, .third-row .stat-title h2, .fifth-row .stat-title h2 {
+    padding-left: 20px;
+    display: inline-block;
     font-family: "Open Sans", sans-serif;
     font-weight: bold; }
-  .third-row .divider-horizontal {
-    height: 5px;
-    border-radius: 3px;
-    background: #77DD77;
-    width: 40%;
-    margin-left: auto;
-    margin-right: auto;
-    margin-bottom: 20px; }
-  .third-row .divider-vertical {
-    height: 300px;
-    width: 5px;
-    background: #77DD77;
-    border-radius: 3px;
-    margin-left: auto;
-    margin-right: auto; }
+.stat-row ul, .third-row ul, .fifth-row ul {
+  line-height: 3; }
+  .stat-row ul li, .third-row ul li, .fifth-row ul li {
+    list-style: none;
+    font-family: "Open Sans", sans-serif;
+    font-weight: light; }
+
+.third-row {
+  background: #e6e6e6; }
+  .third-row h2 {
+    color: #37353a; }
+  .third-row ul li {
+    color: #37353a; }
+  .third-row .triangle {
+    border-top: 30px solid #37353a; }
+
+.fifth-row {
+  background: #37353a; }
+  .fifth-row h2 {
+    color: #e6e6e6; }
+  .fifth-row ul li {
+    color: #e6e6e6; }
+  .fifth-row .triangle {
+    border-top: 30px solid #e6e6e6; }
+
+/**** Filler Row ****/
+.filler-row {
+  height: 100px;
+  background: #37353a; }
 
 /**** Fourth Row ****/
 .fourth-row {

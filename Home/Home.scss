@@ -13,6 +13,7 @@ $rowSize:   550px;
 $squareText: 'Montserrat', sans-serif;
 $fancyText:  'Droid Serif', serif;
 $parText:    'Open Sans', sans-serif;
+$parLight: 300;
 
 /**** Foundation Changes ****/
 input[type=text]:focus, textarea:focus {
@@ -24,6 +25,9 @@ button:hover, button:focus, .button:hover, .button:focus {
 button:hover, button:focus, .button:hover, .button:focus {
     color: $Green; }
 
+.row {
+  max-width:67rem;
+}
 /**** Body Congif ****/
 body {
   margin:0;
@@ -62,18 +66,24 @@ body, html, main {
 }
 
 /**** Rows General ****/
-.first-row, .second-row, .third-row, .fourth-row, .footer {
+h1, h2 {
+  letter-spacing:6px;
+}
+.first-row, .second-row, .third-row, .filler-row, .fourth-row, , .fifth-row, .footer {
   position: relative;
   width:100%;
 }
-.triangle {
-  position:absolute;
-  top:0px;
-  left:46%;
-  width:0%;
-  height:0%;
-  border-left: 40px solid transparent;
-  border-right: 40px solid transparent;
+
+.triangle-container {
+  margin-left:46.5%;
+  .triangle {
+    position:absolute;
+    top:0px;
+    width:0%;
+    height:0%;
+    border-left: 40px solid transparent;
+    border-right: 40px solid transparent;
+  }
 }
 button:focus{
   outline: none;
@@ -132,7 +142,7 @@ button:focus{
   span{
     font: {
       letter-spacing: 5px;
-      weight:bold;
+      weight:$parLight;
       family:$parText;
       size:120%;
     }
@@ -168,6 +178,7 @@ button:focus{
       color:$Dark;
       font: {
         family:$parText;
+        weight:$parLight;
       }
     }
     .title {
@@ -194,6 +205,7 @@ button:focus{
     color:$White;
     font: {
       family:$parText;
+      weight:$parLight;
     }
   }
   h2 {
@@ -205,6 +217,9 @@ button:focus{
       weight:bold;
     }
   }
+  .tempid {
+    max-width:70%;
+  }
   #resume-button {
     &:hover{
       background:$LightDark;
@@ -214,34 +229,76 @@ button:focus{
   }
 }
 /**** Third Row ****/
-.third-row {
-  background: $Dark;
-  h2 {
+.stat-row {
+  img {
+    max-height:100px;
+  }
+  .row {
+    max-width:70rem;
+  }
+  .padding-bot-top {
+    padding-bottom: 7%;
+    padding-top:7%;
+  }
+  .stat-title {
     text-align:center;
-    color: $White;
-    margin:0px;
-    font: {
-      family:$parText;
-      weight:bold;
+    padding-top:3%;
+    padding-bottom:3%;
+    h2 {
+      padding-left:20px;
+      display:inline-block;
+      font: {
+        family:$parText;
+        weight:bold;
+      }
     }
   }
-  .divider-horizontal {
-    height:5px;
-    border-radius:3px;
-    background: $Green;
-    width:40%;
-    margin-left:auto;
-    margin-right:auto;
-    margin-bottom:20px;
+  ul{
+    line-height:3;
+    li {
+      list-style: none;
+      font: {
+        family:$parText;
+        weight:light;
+      }
+    }
   }
-  .divider-vertical {
-    height:300px;
-    width:5px;
-    background:$Green;
-    border-radius:3px;
-    margin-left:auto;
-    margin-right:auto;
+}
+.third-row {
+  @extend .stat-row;
+  background: $LightGrey;
+  h2{
+    color:$Dark;
   }
+  ul {
+    li {
+      color:$Dark;
+    }
+  }
+  .triangle {
+    border-top: 30px solid $Dark;
+  }
+  
+}
+.fifth-row {
+  @extend .stat-row;
+  background:$Dark;
+  h2 {
+    color:$LightGrey;
+  }
+  ul {
+    li {
+      color:$LightGrey;
+    }
+  }
+  .triangle {
+    border-top: 30px solid $LightGrey;
+  }
+}
+/**** Filler Row ****/
+.filler-row {
+  height:100px;
+  background:$Dark;
 }
 /**** Fourth Row ****/ 
 .fourth-row {

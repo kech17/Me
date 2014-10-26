@@ -1,27 +1,52 @@
-var ctx = $("#myChart").get(0).getContext("2d");
+var hardwareChart = $("#hardwareChart").get(0).getContext("2d");
 var data = {
-    labels: ["January", "February", "March", "April", "May", "June", "July"],
+    labels: ["Prototyping", "Robotics", "IC Analysis", "Processors", "Automation"],
     datasets: [
         {
-            label: "My First dataset",
-            fillColor: "rgba(220,220,220,0.2)",
-            strokeColor: "rgba(220,220,220,1)",
-            pointColor: "rgba(220,220,220,1)",
-            pointStrokeColor: "#fff",
-            pointHighlightFill: "#fff",
-            pointHighlightStroke: "rgba(220,220,220,1)",
-            data: [65, 59, 80, 81, 56, 55, 40]
-        },
-        {
-            label: "My Second dataset",
-            fillColor: "rgba(151,187,205,0.2)",
-            strokeColor: "rgba(151,187,205,1)",
-            pointColor: "rgba(151,187,205,1)",
-            pointStrokeColor: "#fff",
-            pointHighlightFill: "#fff",
-            pointHighlightStroke: "rgba(151,187,205,1)",
-            data: [28, 48, 40, 19, 86, 27, 90]
+            label: "Hardware Experience",
+            fillColor: "rgba(119,221,119,0.5)",
+            strokeColor: "rgba(119,221,119,0.8)",
+            highlightFill: "rgba(119,221,119,0.75)",
+            highlightStroke: "rgba(119,221,119,1)",
+            data: [80, 70, 90, 60, 70]
         }
     ]
 };
-var myLineChart = new Chart(ctx).Line(data);
+var myChart = new Chart(hardwareChart).Bar(data, {
+	responsive:true,
+	scaleOverride:true,
+	scaleSteps: 10,
+	scaleStepWidth: 10,
+	scaleStartValue: 0,
+	scaleLabel: "<%=value%>"+"%"
+	
+});
+
+var softwareChart = $("#softwareChart").get(0).getContext("2d");
+var data = [
+    {
+        value: 300,
+        color:"#F7464A",
+        highlight: "#FF5A5E",
+        label: "Red",
+        labelColor: "white"
+    },
+    {
+        value: 50,
+        color: "#46BFBD",
+        highlight: "#5AD3D1",
+        label: "Green"
+    },
+    {
+        value: 100,
+        color: "#FDB45C",
+        highlight: "#FFC870",
+        label: "Yellow"
+    }
+];
+var myChart = new Chart(softwareChart).Pie(data, {
+	responsive:true,
+    onAnimationComplete: function() {
+        softwareChart.fillText(data[0].value + "%", 225 - 20, 225, 200);
+    }
+});

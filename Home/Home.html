@@ -103,49 +103,149 @@
 			</div>
 		</div>
 		<div class='second-row'>
-			<div class='triangle'></div>
+			<div class='triangle-container'>
+				<div class='triangle'></div>
+			</div>
 			<div class='row'>
 				<div class='small-12 large-7 columns'>
-					<h2>who I am. what I want to be.</h2>
+					<h2>who I am.</h2>
 					<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				<br><br>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+						<br>
+						<br>
+						Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
 					</p>
-					<button id='resume-button' class='main-button'>
-					<span>MY RESUME</span>
-				</button>
 				</div>
 				<div class='small-12 large-5 columns'>
-					<img src='/Me/Resource/text.png'/>
+					<img src='/Me/Resource/text.png' class='tempid'/>
+					<button id='resume-button' class='main-button'>
+						<span>MY RESUME</span>
+					</button>
 				</div>
 			</div>
 		</div>
-		<div class='third-row'>			
-			<div class='row'>
-				<div class='large-3 columns'>
-					large-5
+		<div class='third-row'>
+			<div class='triangle-container'>
+				<div class='triangle'></div>
+			</div>
+			<div class='padding-bot-top row'>
+				<div class='small-12 large-6 columns'>
+					<canvas id="hardwareChart" width="536" height="400"></canvas>
 				</div>
 				<div class='large-6 columns'>
-					<div class='large-5 columns'>
-						<h2>hardware</h2>
-						<img src='/Me/Resource/wrench.png'/>
+					<div class='row'>
+						<div class='large-12 columns'>
+							<div class='stat-title'>
+								<img src='/Me/Resource/wrench.png'/><h2>hardware</h2>
+							</div>
+						</div>
 					</div>
-					<div class='large-2 columns'>
-						<div class='divider-vertical'></div>
-					</div>
-					<div class='large-5 columns'>
-						<h2>software</h2>
-						<img src='/Me/Resource/code.png'/>
+					<div class='row'>
+						<div class='small-6 large-6 columns'>
+							<ul>
+								<li>
+									Altera FPGA Dev Board
+								</li>
+								<li>
+									Arduino Uno and Fio
+								</li>
+								<li>
+									Xbee and Wifly modules
+								</li>
+								<li>
+									Breadboarding Circuits
+								</li>
+								<li>
+									Sensors and Actuators
+								</li>
+							</ul>
+						</div>
+						<div class='small-6 large-6 columns'>
+							<ul>
+								<li>
+									Multimeter and Oscillscopes
+								</li>
+								<li>
+									RTL Design
+								</li>
+								<li>
+									VEX Robotics
+								</li>
+								<li>
+									ARM Processor
+								</li>
+								<li>
+									VHDL and Assembly
+								</li>
+							</ul>
+						</div>
 					</div>
 				</div>
-				<div class='large-3 columns'>
-					large-5
+			</div>
+		</div>
+		<div class='fifth-row'>
+			<div class='triangle-container'>
+				<div class='triangle'></div>
+			</div>
+			<div class='padding-bot-top row'>
+				<div class='large-6 columns'>
+					<div class='row'>
+						<div class='large-12 columns'>
+							<div class='stat-title'>
+								<img src='/Me/Resource/code.png'/><h2>software</h2>
+							</div>
+						</div>
+					</div>
+					<div class='row'>
+						<div class='small-6 large-6 columns'>
+							<ul>
+								<li>
+									C#, C++, Python
+								</li>
+								<li>
+									ASP.NET and PL/SQL
+								</li>
+								<li>
+									Eclipse and xCode
+								</li>
+								<li>
+									Github, P4, and TFS
+								</li>
+								<li>
+									Matlab and Multisim
+								</li>
+							</ul>
+						</div>
+						<div class='small-6 large-6 columns'>
+							<ul>
+								<li>
+									CSS (SASS) and HTML
+								</li>
+								<li>
+									Javascript and jQuery
+								</li>
+								<li>
+									Java and Objective-C
+								</li>
+								<li>
+									Android and iOS Dev
+								</li>
+								<li>
+									Wordpress and SharePoint
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class='small-12 large-6 columns'>
+					<canvas id="softwareChart" width="450" height="450"></canvas>
 				</div>
 			</div>
 		</div>
 		<div class='fourth-row'>
-			<div class='triangle'></div>
+			<div class='triangle-container'>
+				<div class='triangle'></div>
+			</div>
 			<header>
 				<h2>contact me.</h2>
 			</header>
@@ -163,9 +263,7 @@
 						</label>
 					</div>
 					<div class='large-4 columns'>
-						<label>Your Message 							
-							<textarea id='message'></textarea> 
-						</label>
+						<label>Your Message 							<textarea id='message'></textarea> </label>
 					</div>
 				</div>
 			</form>
