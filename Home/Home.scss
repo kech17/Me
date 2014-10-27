@@ -4,6 +4,7 @@ $DarkBlue:  #1D2F43;
 $Blue:      #779ECB;
 $LightBlue: #E8EDE9;
 $Grey:      #bdbdbd;
+$DarkGrey:  #a4a4a4;
 $Purple:    #B39EB5;
 $Dark:      #37353a;
 $LightDark: #504d55;
@@ -66,6 +67,9 @@ body, html, main {
 }
 
 /**** Rows General ****/
+.green-text {
+  color:$Green;
+}
 h1, h2 {
   letter-spacing:6px;
 }
@@ -90,7 +94,7 @@ button:focus{
 }
 /**** Main Row ****/
 .fixed-row {
-  height: 700px;
+  height: 600px;
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -155,10 +159,14 @@ button:focus{
   background: $LightGrey;
 }
 .first-row header{
-  padding-top:1px;
-  text-align:center;
+  
 }
 .first-row {
+  header {
+    padding-top:5%;
+    text-align:center;
+    padding-bottom:3%;
+  }
   h2{
     color:$Dark;
     padding-top:20px;
@@ -186,6 +194,9 @@ button:focus{
       font-size: 150%;
       font-weight:bold;
     }
+  }
+  .description {
+    padding-bottom:7%;
   }
 }
 
@@ -242,11 +253,8 @@ button:focus{
   }
   .stat-title {
     text-align:center;
-    padding-top:3%;
-    padding-bottom:3%;
     h2 {
       padding-left:20px;
-      display:inline-block;
       font: {
         family:$parText;
         weight:bold;
@@ -303,7 +311,10 @@ button:focus{
 /**** Fourth Row ****/ 
 .fourth-row {
   background: $LightGrey;
-  h2{
+  header{
+    padding-top:5%;
+    padding-bottom:3%;
+    h2{
     color:$Dark;
     margin:0px;
     padding-top:40px;
@@ -312,6 +323,17 @@ button:focus{
       weight:bold;
       family:$parText;
       size:350%;
+      }
+    }
+  }
+  p {
+    padding-bottom:3%;
+    color:$DarkGrey;
+    text-align:center;
+    font: {
+      weight:light;
+      family: $parText;
+      size:150%;
     }
   }
   form {
@@ -330,11 +352,14 @@ button:focus{
     }
     textarea {
       border-radius:10px;
-      height:200px;
+      min-height:200px;
+      max-height:200px;
+      
     }
   }
   .button-wrapper {
       text-align:center;
+      padding-bottom:5%;
       .main-button {
         border:3px solid $Dark;
         color: $Dark;

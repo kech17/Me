@@ -1,5 +1,5 @@
 var hardwareChart = $("#hardwareChart").get(0).getContext("2d");
-var data = {
+var hardwareData = {
     labels: ["Prototyping", "Robotics", "IC Analysis", "Processors", "Automation"],
     datasets: [
         {
@@ -12,41 +12,53 @@ var data = {
         }
     ]
 };
-var myChart = new Chart(hardwareChart).Bar(data, {
+var myChart = new Chart(hardwareChart).Bar(hardwareData, {
 	responsive:true,
 	scaleOverride:true,
 	scaleSteps: 10,
 	scaleStepWidth: 10,
 	scaleStartValue: 0,
-	scaleLabel: "<%=value%>"+"%"
+	scaleLabel: "<%=value%>"+"%",
+	showTooltips: false
 	
 });
-
 var softwareChart = $("#softwareChart").get(0).getContext("2d");
-var data = [
+var softwareData = [
     {
-        value: 300,
+        value: 25,
         color:"#F7464A",
-        highlight: "#FF5A5E",
-        label: "Red",
-        labelColor: "white"
+        label: "Web Dev",
     },
     {
-        value: 50,
+        value: 30,
         color: "#46BFBD",
-        highlight: "#5AD3D1",
-        label: "Green"
+        label: "iOS"
     },
     {
-        value: 100,
+        value: 5,
         color: "#FDB45C",
-        highlight: "#FFC870",
-        label: "Yellow"
-    }
+    	label: "Android"
+    },
+    {
+        value: 30,
+        color: "#FDB45C",
+    	label: "Object Oriented"
+    },
+    {
+        value: 10,
+        color: "#FDB45C",
+    	label: "Simulations"
+    },
 ];
-var myChart = new Chart(softwareChart).Pie(data, {
-	responsive:true,
-    onAnimationComplete: function() {
-        softwareChart.fillText(data[0].value + "%", 225 - 20, 225, 200);
-    }
+var myChart = new Chart(softwareChart).Pie(softwareData, {
+        tooltipTemplate: "<%=label%>: <%=value%>" + "%",
+        
+        onAnimationComplete: function()
+        {
+            this.showTooltip(this.segments, true);
+        },
+        
+        tooltipEvents: [],
+        
+        showTooltips: true
 });

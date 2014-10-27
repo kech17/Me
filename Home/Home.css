@@ -49,6 +49,9 @@ body, html, main {
   color: #989898; }
 
 /**** Rows General ****/
+.green-text {
+  color: #77DD77; }
+
 h1, h2 {
   letter-spacing: 6px; }
 
@@ -71,7 +74,7 @@ button:focus {
 
 /**** Main Row ****/
 .fixed-row {
-  height: 700px;
+  height: 600px;
   background-size: cover;
   background-attachment: fixed;
   background-repeat: no-repeat;
@@ -127,9 +130,9 @@ button:focus {
   background: #e6e6e6; }
 
 .first-row header {
-  padding-top: 1px;
-  text-align: center; }
-
+  padding-top: 5%;
+  text-align: center;
+  padding-bottom: 3%; }
 .first-row h2 {
   color: #37353a;
   padding-top: 20px;
@@ -149,6 +152,8 @@ button:focus {
     padding-top: 20px;
     font-size: 150%;
     font-weight: bold; }
+.first-row .description {
+  padding-bottom: 7%; }
 
 /**** Second Row ****/
 .second-row {
@@ -185,12 +190,9 @@ button:focus {
   padding-bottom: 7%;
   padding-top: 7%; }
 .stat-row .stat-title, .third-row .stat-title, .fifth-row .stat-title {
-  text-align: center;
-  padding-top: 3%;
-  padding-bottom: 3%; }
+  text-align: center; }
   .stat-row .stat-title h2, .third-row .stat-title h2, .fifth-row .stat-title h2 {
     padding-left: 20px;
-    display: inline-block;
     font-family: "Open Sans", sans-serif;
     font-weight: bold; }
 .stat-row ul, .third-row ul, .fifth-row ul {
@@ -226,14 +228,24 @@ button:focus {
 /**** Fourth Row ****/
 .fourth-row {
   background: #e6e6e6; }
-  .fourth-row h2 {
-    color: #37353a;
-    margin: 0px;
-    padding-top: 40px;
+  .fourth-row header {
+    padding-top: 5%;
+    padding-bottom: 3%; }
+    .fourth-row header h2 {
+      color: #37353a;
+      margin: 0px;
+      padding-top: 40px;
+      text-align: center;
+      font-weight: bold;
+      font-family: "Open Sans", sans-serif;
+      font-size: 350%; }
+  .fourth-row p {
+    padding-bottom: 3%;
+    color: #a4a4a4;
     text-align: center;
-    font-weight: bold;
+    font-weight: light;
     font-family: "Open Sans", sans-serif;
-    font-size: 350%; }
+    font-size: 150%; }
   .fourth-row form .columns {
     width: 50%; }
   .fourth-row form label {
@@ -244,9 +256,11 @@ button:focus {
     border-radius: 10px; }
   .fourth-row form textarea {
     border-radius: 10px;
-    height: 200px; }
+    min-height: 200px;
+    max-height: 200px; }
   .fourth-row .button-wrapper {
-    text-align: center; }
+    text-align: center;
+    padding-bottom: 5%; }
     .fourth-row .button-wrapper .main-button {
       border: 3px solid #37353a;
       color: #37353a;
