@@ -18,8 +18,7 @@ var myChart = new Chart(hardwareChart).Bar(hardwareData, {
 	scaleSteps: 10,
 	scaleStepWidth: 10,
 	scaleStartValue: 0,
-	scaleLabel: "<%=value%>"+"%",
-	showTooltips: false
+	scaleLabel: "<%=value%>"+"%"
 	
 });
 var softwareChart = $("#softwareChart").get(0).getContext("2d");

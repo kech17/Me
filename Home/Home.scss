@@ -67,6 +67,31 @@ body, html, main {
 }
 
 /**** Rows General ****/
+  .padding-bot-top {
+    padding-bottom: 7%;
+    padding-top:7%;
+  }
+header{
+   padding-bottom:3%;
+   h2{
+   text-align:center;
+   font: {
+     weight:bold;
+     family:$parText;
+     size:350%;
+     }
+   }
+}
+.underline {
+  height:8px;
+  border-radius:10px;
+  width:100px;
+  background:$Green;
+  margin-left:auto;
+  margin-right:auto;
+  margin-top:2%;
+  margin-bottom:2%;
+}
 .green-text {
   color:$Green;
 }
@@ -157,24 +182,8 @@ button:focus{
 /**** First Row ****/
 .first-row {
   background: $LightGrey;
-}
-.first-row header{
-  
-}
-.first-row {
-  header {
-    padding-top:5%;
-    text-align:center;
-    padding-bottom:3%;
-  }
   h2{
     color:$Dark;
-    padding-top:20px;
-    font: {
-      weight:bold;
-      family:$parText;
-      size:350%;
-    }
   }
   .columns{
     text-align:center;
@@ -190,13 +199,12 @@ button:focus{
       }
     }
     .title {
-      padding-top:20px;
-      font-size: 150%;
-      font-weight:bold;
+      font: {
+        size: 150%;
+        weight:bold;
+      }
+
     }
-  }
-  .description {
-    padding-bottom:7%;
   }
 }
 
@@ -204,8 +212,6 @@ button:focus{
 
 .second-row {
   background: $Dark;
-  padding-top: 5%;
-  padding-bottom:5%;
   .triangle {
     border-top: 30px solid $LightGrey;
   }
@@ -220,13 +226,7 @@ button:focus{
     }
   }
   h2 {
-    color: $White;
-    margin:0px;
-    padding-bottom:20px;
-    font: {
-      family:$parText;
-      weight:bold;
-    }
+    color:$White;
   }
   .tempid {
     max-width:70%;
@@ -247,10 +247,6 @@ button:focus{
   .row {
     max-width:70rem;
   }
-  .padding-bot-top {
-    padding-bottom: 7%;
-    padding-top:7%;
-  }
   .stat-title {
     text-align:center;
     h2 {
@@ -261,21 +257,18 @@ button:focus{
       }
     }
   }
-  ul{
-    line-height:3;
-    li {
-      list-style: none;
-      font: {
-        family:$parText;
-        weight:light;
-      }
+  p{
+    line-height:4;
+     font: {
+       family:$parText;
+       weight:light;
     }
   }
 }
 .third-row {
   @extend .stat-row;
   background: $LightGrey;
-  h2{
+  h2 {
     color:$Dark;
   }
   ul {
@@ -288,6 +281,7 @@ button:focus{
   }
   
 }
+/*
 .fifth-row {
   @extend .stat-row;
   background:$Dark;
@@ -303,6 +297,7 @@ button:focus{
     border-top: 30px solid $LightGrey;
   }
 }
+*/
 /**** Filler Row ****/
 .filler-row {
   height:100px;
@@ -310,21 +305,10 @@ button:focus{
 }
 /**** Fourth Row ****/ 
 .fourth-row {
-  background: $LightGrey;
-  header{
-    padding-top:5%;
-    padding-bottom:3%;
-    h2{
-    color:$Dark;
-    margin:0px;
-    padding-top:40px;
-    text-align:center;
-    font: {
-      weight:bold;
-      family:$parText;
-      size:350%;
-      }
-    }
+  //background: $LightGrey;
+  background:$Dark;
+  h2 {
+    color:$White;
   }
   p {
     padding-bottom:3%;
@@ -341,17 +325,18 @@ button:focus{
       width:50%;
     }
     label {
+      color:$White;
       font: {
         family: $parText;
         size:120%;
-        weight: bold;
+        weight: light;
       }
     }
     input {
-      border-radius:10px;
+      border-radius:5px;
     }
     textarea {
-      border-radius:10px;
+      border-radius:5px;
       min-height:200px;
       max-height:200px;
       
@@ -361,21 +346,21 @@ button:focus{
       text-align:center;
       padding-bottom:5%;
       .main-button {
-        border:3px solid $Dark;
-        color: $Dark;
+        border:3px solid $Green;
+        color: $Green;
         min-height:60px;
         margin-top:30px;
         &:hover{
           border:3px solid $Green;
           color: $Green;
-          background: transparent;
+          background: $Dark;
           cursor: pointer;
         }
       }
     }
 }
 .fourth-row .triangle {
-  border-top: 30px solid $Dark;
+  border-top: 30px solid $LightGrey;
 }
 /**** Fade In ****/
 .fade-in {
@@ -385,5 +370,5 @@ button:focus{
 /**** Footer ****/
 .footer {
   height:200px;
-  background: $Dark;
+  background: $Green;
 }
