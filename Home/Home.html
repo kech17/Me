@@ -7,7 +7,7 @@
 		<!-- Important Meta Tag -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<title>Kevin Chang</title>
-
+		
 		<!-- Foundation -->
 		<link rel="stylesheet" href="/Me/Foundation/css/normalize.css">
 		<link rel="stylesheet" href="/Me/Foundation/css/foundation.css">
@@ -20,8 +20,14 @@
 		<!-- Chart.js -->
 		<script src='/Me/Chart.js/Chart.min.js'></script>
 
-		<!-- Home Stylesheet -->
+		<!-- Home Resources -->
 		<link rel='stylesheet' type='text/css' href='Home.css'>
+		<link rel='stylesheet' type='text/css' href='/Me/Resource/animations.css'>
+		<script src='/Me/Home/Home.js'></script>
+
+		<!-- Sweet Alert -->
+		<script src='/Me/SweetAlert/sweet-alert.min.js'></script>
+		<link rel='stylesheet' href='/Me/SweetAlert/sweet-alert.css'>
 
 		<!-- Google Fonts -->
 		<link rel='stylesheet' type='text/css' href='http://fonts.googleapis.com/css?family=Montserrat'>
@@ -32,34 +38,39 @@
 	<body>
 
 		<div class='fixed-row main-row'>
-			<nav class='main-menu'>
-				<ul>
-					<li class='current'>
-						<a href='Home.html'>Home</a>
-					</li>
+			<div class='overlay'>
+				<nav class='main-menu'>
+					<ul>
+						<li class='current'>
+							<a href='Home.html'>Home</a>
+						</li>
 
-					<li >
-						<a href='/projects'>Projects</a>
-					</li>
+						<li>
+							<a class='project-nav'>Projects</a>
+						</li>
 
-					<li >
-						<a href='/experience'>C.V.</a>
-				</ul>
-			</nav>
-			<div class='title-wrapper'>
-				<h1 class='normal'>Hi, my name is Kevin</h1>
-				<h1 class='bold'>I AM A DEVELOPER</h1>
-				<button id='contact-button' class='main-button'>
-					<span>CONTACT ME</span>
-				</button>
+						<li >
+							<a class='cv-nav'>C.V.</a>
+					</ul>
+				</nav>
+				<div class='title-wrapper'>
+					<h1 class='normal'>Hi, my name is Kevin</h1>
+					<h1 class='bold'>I AM A DEVELOPER</h1>
+					<button id='contact-button' class='main-button'>
+						<span>CONTACT ME</span>
+					</button>
+				</div>
 			</div>
-
 		</div>
 		<div class='first-row'>
 			<div class='padding-bot-top row'>
 				<header>
 					<h2>about <span class='green-text'>me</span>.</h2>
 				</header>
+				<p class='title-caption'>
+					I am a 20 year old engineering student in Canada. I love to
+					work on projects involving everything tech related!
+				</p>
 				<div class='row'>
 					<div class='small-4 large-4 columns'><img src='/Me/Resource/rocket.png' class='main-icons'/>
 					</div>
@@ -105,9 +116,6 @@
 			</div>
 		</div>
 		<div class='second-row'>
-			<div class='triangle-container'>
-				<div class='triangle'></div>
-			</div>
 			<div class='padding-bot-top row'>
 				<header>
 					<h2>who I <span class='green-text'>am</span>.</h2>
@@ -126,13 +134,14 @@
 			</div>
 		</div>
 		<div class='third-row'>
-			<div class='triangle-container'>
-				<div class='triangle'></div>
-			</div>
 			<div class='padding-bot-top row'>
 				<header>
 					<h2><span class='green-text'>my</span> skills.</h2>
 				</header>
+				<p class='title-caption'>
+					I love exploring new concepts and perfecting my skills. I strive
+					to learn more about the technical world everyday!
+				</p>
 				<div class='large-7 columns'>
 					<canvas id="hardwareChart" width="650" height="397"></canvas>
 				</div>
@@ -154,21 +163,17 @@
 			</div>
 		</div>
 		<div class='fourth-row'>
-			<div class='triangle-container'>
-				<div class='triangle'></div>
-			</div>
 			<div class='padding-bot-top row'>
 				<header>
 					<h2>contact <span class='green-text'>me</span>.</h2>
 				</header>
-				<p>
+				<p class='title-caption'>
 					Want to just say hi? Send me an email about anything you like!
-					<br>
 					I will get back to you as soon as possible!
 				</p>
 				<form>
 					<div class='row'>
-						<div class='large-4 columns'>
+						<div class='large-4 columns fade-in-left'>
 							<label>First Name
 								<input type='text' id='firstName'>
 							</label>
@@ -179,8 +184,10 @@
 								<input type='text' id='email'>
 							</label>
 						</div>
-						<div class='large-4 columns'>
-							<label>Your Message 								<textarea id='message'></textarea> </label>
+						<div class='large-4 columns fade-in-right'>
+							<label>Your Message 								
+								<textarea id='message'></textarea> 
+							</label>
 						</div>
 					</div>
 				</form>
@@ -192,58 +199,30 @@
 				</div>
 			</div>
 		</div>
-		<div class='footer'>
-			This is footer
-		</div>
+		<footer>
+			<div class='row'>
+				<div class='large-6 columns'>
+					© 2014 Kevin Chang
+				</div>
+				<div class='large-6 columns'>
+					<ul>
+						<li class='current'>
+							<a href='Home.html'>Home</a>
+						</li>
+
+						<li>
+							<a class='project-nav'>Projects</a>
+						</li>
+
+						<li >
+							<a class='cv-nav'>C.V.</a>
+					</ul>
+				</div>
+			</div>
+		</footer>
 	</body>
 	<script src='/Me/Home/customChart.js'></script>
 	<script>
 		$(document).foundation();
-		var fadeFromLeft = 100;
-		$(document).ready(function() {
-			$(window).scroll(function() {
-				var bottom_of_window = $(window).scrollTop() + $(window).height();
-				$('.fade-in').each(function(i) {
-					var bottom_of_object = $(this).offset().top + $(this).outerHeight();
-					if (bottom_of_window > bottom_of_object - $(this).outerHeight() / 2) {
-						$(this).stop().animate({
-							opacity : 1,
-							marginLeft : '+=' + fadeFromLeft
-						}, 500);
-						$(this).removeClass('fade-in');
-						$(this).addClass('fade-in-shown');
-					}
-				});
-				var offset = $('.first-row').offset().top - 45;
-				if ($(window).scrollTop() > offset) {
-					$('.main-menu').stop().animate({
-						backgroundColor : '#37353a',
-						boxShadow : '0 2px 6px rgba(0, 0, 0, 0.2)',
-						top : '0px'
-					}, 500);
-					/*$('.main-menu').css({
-					 'background-color': '#37353a',
-					 'box-shadow' : '0 2px 6px rgba(0, 0, 0, 0.2)',
-					 'top' : '0px'
-					 });*/
-				}
-				if ($(window).scrollTop() < 150) {
-					$('.main-menu').stop().animate({
-						backgroundColor : 'transparent'
-					}, 500);
-				}
-			});
-			$("#contact-button").click(function() {
-				$('html, body').animate({
-					scrollTop : $(".third-row").offset().top - 65
-				}, 2500);
-			});
-			$("#send-button").click(function() {
-				$('html, body').animate({
-					scrollTop : 0
-				}, 2500);
-			});
-		});
 	</script>
-
 </html>
